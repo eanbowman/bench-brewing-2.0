@@ -1,0 +1,676 @@
+@import "_mixins";
+@import "_bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+
+// Fonts and Headers and other site wide settings
+body, html{
+    font-family: 'Arvo', sans-serif;
+    color: white;
+    background-color: black;
+}
+
+p{
+    font-size: 14px;
+
+    @media only screen and (min-width: 1024px){
+        font-size: 18px;
+    }
+
+    @media only screen and (min-width: 1365px){
+        font-size: 24px;
+    }
+}
+
+h1{
+    font-size: 35px;
+    line-height: 1.1em;
+    border-bottom: none;
+    margin-bottom: 10px;
+    white-space: normal;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+
+    @media only screen and (min-width: 1024px){
+        font-size: 48px;
+    }
+
+    @media only screen and (min-width: 1365px){
+        font-size: 60px;
+    }
+}
+
+h2{
+    font-size: 35px;
+    line-height: 1.1em;
+    border-bottom: none;
+    margin-bottom: 10px;
+    white-space: normal;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+
+    @media only screen and (min-width: 1024px){
+        font-size: 48px;
+    }
+
+    @media only screen and (min-width: 1365px){
+        font-size: 60px;
+    }
+}
+
+h3{
+    font-size: 18px;
+    line-height: 1.1em;
+    border-bottom: none;
+    margin-bottom: 10px;
+    white-space: normal;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+
+    @media only screen and (min-width: 1024px){
+        font-size: 24px;
+    }
+
+    @media only screen and (min-width: 1365px){
+        font-size: 36px;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+// General Classes
+.ani1{
+    -webkit-transition: all 1s; /* Safari */
+    transition: all 1s;
+}
+.ani3{
+    -webkit-transition: all 3s; /* Safari */
+    transition: all 3s;
+}
+.ani_5{
+    -webkit-transition: all .5s; /* Safari */
+    transition: all .5s;
+}
+//
+.right-line{
+        position: relative;
+        margin-bottom: 20px;
+        right: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #444;
+}
+.center-line{
+        position: relative;
+        margin:auto;
+        margin-bottom: 20px;
+        right: 0;
+        left: 0;
+        width: 50%;
+        max-width: 50%;
+        height: 3px;
+        background-color: #fff;
+}
+
+
+// Backgrounds
+.homeBackground{
+    position: absolute;
+    top: 0px;
+    height: 1200px;
+    width: 100%;
+    background-image: url('/_assets/images/bknd-home.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto 130%;
+     
+
+    @media only screen and (min-width: 1024px){
+        height: 1400px;
+    }
+    @media only screen and (min-width: 1366px){
+        height: 1600px;
+    }
+    @media only screen and (min-width: 1650px){
+        height: 1800px;
+    }
+}
+
+.brewBackground{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+    background-color: #00aaff;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto 130%;
+    @media only screen and (max-width: 768px){
+        background-image: url('/_assets/images/ourBreweryMobileBackground.gif');
+    }
+    
+    .timelapse{
+        pointer-events: none;
+        position: absolute;
+        min-width: 1600px;
+        top: 0;
+        left: 0;
+        margin: auto;
+
+        @media only screen and (min-width: 1024px){
+            min-width: 1600px;
+        }
+        @media only screen and (min-width: 1366px){
+            min-width: 1800px;
+        }
+        @media only screen and (min-width: 1800px){
+            min-width: 2500px;
+        }
+        @media only screen and (max-width: 768px){
+            display: none;
+        }
+    }
+
+    
+}
+
+// Nav
+
+#nav-mainNav{
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    z-index: 1003;
+
+    .nav-navLeft{
+        float: left;
+
+        .nav-logo{
+            float: left;
+        }
+
+        .nav-sectionLabel{
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 20px;
+            float: left;
+            background-color: rgba(0, 0, 0, .5);
+            text-transform: uppercase;
+        }
+
+        .nav-logo{
+            padding-left: 20px;
+            padding-right: 10px;
+        }
+    }
+
+    .nav-navRight{
+        float: right;
+        .nav-socialButtons{
+            position: relative;
+            right: 25px;
+            top: 0px;
+            > a {
+                background: #313131;
+                position: relative;
+                float: right;
+                width: 30px;
+                height: 30px;
+                margin-left: 5px;
+                margin-right: 5px;
+                border-radius: 100%;
+                -moz-border-radius: 100%;
+                &:hover {
+                    background: #444;
+                }
+                > em {
+                    padding: 7px;
+                    position: relative;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    font-size: 18px;
+                    line-height: 18px;
+                    color: #fff;
+                    &.fa-facebook {
+                        padding-left: 10px;
+                    }
+                }
+                .fa-untapped {
+                    padding-left: 5px;
+                    padding-top: 5px;
+                    width: 85%;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 960px){
+            display: none;
+    }
+
+}
+
+// Mobile Nav styles
+
+    #nav-mobileNavHolder{
+        position: absolute;
+        top: 0;
+        height: 65px;
+        background-color: #fff;
+        width: 100%;
+        display: none;
+        z-index: 1002;
+
+        .nav-menuBar{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 65px;
+            background-color: white;
+            //z-index: 1003;
+            .nav-navLeft{
+                float: left;
+                width: 100px;
+                padding: 15px;
+                .nav-logo{
+                    
+                }
+            }
+            .nav-navRight{
+                float: right;
+                .hamburger{
+                    color: #313131;
+                    float: right;
+                    position: relative ;
+                    top: 17.5px;
+                    padding-right: 15px;
+                }
+                .nav-socialButtons{
+                    position: relative;
+                    right: 25px;
+                    top: 15px;
+                    /* padding-right: 15px; */
+                    width: 200px;
+                    > a {
+                        background: #313131;
+                        position: relative;
+                        float: right;
+                        width: 30px;
+                        height: 30px;
+                        margin-left: 5px;
+                        margin-right: 5px;
+                        border-radius: 100%;
+                        -moz-border-radius: 100%;
+                        &:hover {
+                            background: #444;
+                        }
+                        > em {
+                            padding: 7px;
+                            position: relative;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            font-size: 18px;
+                            line-height: 18px;
+                            color: #fff;
+                            &.fa-facebook {
+                                padding-left: 10px;
+                            }
+                        }
+                        .fa-untapped {
+                            padding-left: 5px;
+                            padding-top: 5px;
+                            width: 85%;
+                        }
+                    }
+                }
+            }
+        }
+        .nav-menuDropDown{
+            clear: both;
+            position: absolute;
+            top: -500px;
+            width: 100%;
+             .nav-sectionLabel{
+                width: 100%;
+                color: #313131;
+                background-color: white;
+                text-align: center;
+                text-transform: uppercase;
+                height: 50px;
+                border-bottom: solid 1px;
+                border-bottom-color: #313131;
+                padding-top: 15px;
+             }
+             .nav-mobileOurStory{
+                border-top: solid 1px;
+                border-top-color: #313131;
+             }
+        }
+
+        @media only screen and (max-width: 960px){
+            display: inline-block;
+        }
+    }
+
+// HomePage
+
+#benchLogo{
+    .home-bigLogo{
+        opacity: 0;
+        //transform: scale(.8);
+        img {
+            width: 100%;
+            padding-top: 150px;
+            padding-left: 30%;
+            padding-right: 30%;
+            padding-bottom: 250px;
+           
+
+            @media only screen and (max-width: 768px){
+                padding-left: 20%;
+                padding-right: 20%;
+            }
+
+            @media only screen and (max-width: 460px){
+                padding-left: 15%;
+                padding-right: 15%;
+            }
+
+            @media only screen and (max-width: 420px){
+                padding-left: 10%;
+                padding-right: 10%;
+            }
+        }
+    }
+}
+
+#homeHeroCopy{
+    .home-heroCopy{
+        padding:5%;
+        background-color: #444;
+
+        img{
+            padding: 30%;
+            padding-top: 20px;
+            padding-bottom: 60px;
+        }
+    }
+}
+
+#homeBeerTeaser{
+    z-index: 1000;
+    .home-beerTeaser{
+        padding:0;
+        .home-beerOffset{
+            margin-top: -100px;
+            @media only screen and (max-width: 666px){
+                margin-top: -50px;
+            }
+        }
+    }
+
+    .home-beerCta{
+        position: absolute;
+        width: 50%;
+        right: 0;
+        color: #444;
+
+        h2{
+            text-align: right;
+            padding: 0;
+            padding-right: 20px;
+
+            @media only screen and (max-width: 480px){
+                margin-top: -25px;
+            }
+
+            @media only screen and (max-width: 420px){
+                font-size: 24px;
+            }
+
+            @media only screen and (min-width: 1024px){
+                padding-right: 50px;
+            }
+
+            @media only screen and (min-width: 1365px){
+                padding-right: 100px;
+                padding-top: 100px;
+            }
+        }
+        
+        .home-beerCopy{
+        
+            p{
+                @media only screen and (max-width: 666px){
+                    font-size: 10px;
+                }
+                @media only screen and (max-width: 480px){
+                    font-size: 8px;
+                }
+            }
+
+            @media only screen and (min-width: 1024px){
+                padding-right: 50px;
+            }
+            //
+            @media only screen and (min-width: 1365px){
+                padding-right: 100px;
+            }
+        }
+
+        .home-beerLrnImg{
+            padding-top: 40px;
+            width: 40%;
+            position: absolute;
+            margin: auto;
+            right: 50px;
+            max-width: 300px;
+
+            @media only screen and (max-width: 666px){
+                padding-top: 10px;
+                width: 60%;
+            }
+             @media only screen and (min-width: 1365px){
+                right: 100px;
+            }
+        }
+
+        
+    }
+}
+
+#homeShopTeaser{
+    margin-top: -50px;
+    z-index: 999;
+    //height:500px;
+    background-image: url('/_assets/images/shopTeaser.jpg');
+    background-size: auto 140%;
+    background-position: left top;
+    background-repeat: no-repeat;
+    @media only screen and (max-width: 768px){
+        // height: 300px;
+    }
+
+    .home-shopCta{
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .home-shopCopy{
+        margin: auto;
+        max-width: 768px;
+        padding:20px;
+        padding-top: 0;
+    }
+
+    .home-shopLearnMore{
+        height: 150px;
+
+        .home-shopLrnImg {
+            width: 100%;
+            left: 0;
+            right:0;
+            width: 30%;
+            margin: auto;
+            position: absolute;
+            max-width: 300px;
+        }
+    }
+
+}
+
+/////// Our Brewery
+#brewHeroCopy{
+    padding:0;
+    padding-top:200px;
+    padding-bottom: 100px;
+
+    .brew-heroCopy{
+        background-color: #313131;
+
+        h1{
+            padding-top:50px;
+        }
+
+        h1, h2, h3 {
+            text-align: right;
+            padding-left: 50px;
+            padding-right: 40px;
+        }
+        p{
+            padding-left: 50px;
+            padding-right: 40px;
+            padding-bottom: 50px;
+        }
+    }
+    .right-line{
+        background-color: white;
+    }
+}
+#brewSketches{
+    padding-top: 13%;
+    padding-bottom:13%;
+    position: relative;
+    background-size: cover;
+    background-image: url(/_assets/images/bknd-ourvision.png);
+
+    h3{
+        color: #313131;
+        padding-top:10%;
+    }
+
+    .brew-sketch{
+        img {
+            position: relative;
+            display: block;
+            left: 0;
+            right: 0;
+            margin: auto;
+            padding:5%;
+            @media only screen and (max-width: 768px){
+                padding-top: 0%;
+                padding-bottom: 0%;
+                max-width: 300px;
+            }
+        }
+    }
+    #foeder{
+        @media only screen and (max-width: 768px){
+            padding-bottom: 50px;
+        }
+    }
+}
+
+#homeShopTeaser.brewTeaser{
+    margin-top: -5%;
+    @media only screen and (max-width: 768px){
+        margin-top: -12%;
+    }
+}
+
+// Footer Code
+#Footer{
+    background-color: #111;
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+    .footer-line{
+        float: left;
+        text-align: center;
+    }
+    .footer-address{
+        width: 40%;
+        padding-top: 35px;
+        @media only screen and (max-width: 950px){
+            width: 100%;
+            padding: 5px;
+        }
+    }
+    .footer-logo{
+        position: relative;
+        width: 20%;
+        min-height: 75px;
+        display: inline-block;
+        
+        img{
+            position: absolute;
+            top: 0;
+            bottom:0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: auto;
+            height: 100%;
+            padding: 5px;
+        }
+
+        @media only screen and (max-width: 950px){
+            width: 100%;
+            padding: 5px;
+        }
+    }
+    .footer-email{
+        width: 25%;
+        padding-top: 35px;
+
+        @media only screen and (max-width: 950px){
+            width: 100%;
+            padding: 5px;
+        }
+    }
+    .footer-social{
+        width: 15%;
+        padding-top: 35px;
+
+        img{
+            width: 10%;
+        }
+
+        @media only screen and (max-width: 950px){
+            width: 100%;
+            padding: 5px;
+            img{
+                width: 5%;
+            }
+        }
+    }
+
+}

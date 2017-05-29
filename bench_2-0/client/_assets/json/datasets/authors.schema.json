@@ -1,0 +1,22 @@
+{
+	"name": "Authors",
+	"data": "_assets/json/authors.json",
+	"default": "title",
+	"_schema": [
+		{
+			"title": "Name",
+			"name": "title",
+			"type" : "text"
+		},
+		{
+			"title": "Image",
+			"name": "image",
+			"type" : "image"
+		},
+		{
+			"title": "Bio",
+			"name": "bio",
+			"type" : "richtext"
+		}
+	]
+}

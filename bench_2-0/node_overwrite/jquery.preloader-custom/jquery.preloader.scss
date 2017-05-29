@@ -1,0 +1,39 @@
+#preloader {
+    position: fixed;
+    /*
+    background: rgba(0, 0, 0, 1);
+    */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9900;
+    opacity: 0.5;
+    -webkit-transition: all 5s ease;
+    -moz-transition: all 5s ease;
+    -o-transition: all 5s ease;
+    -ms-transition: all 5s ease;
+    transition: all 5s ease;
+    #status {
+        position: absolute;
+        
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+
+        span.percentage {
+            display: none;
+            position: absolute;
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            transition: all 1s ease;
+            background: #fff;
+            height: 5px;
+            z-index: 9505;
+        }
+    }
+}
+

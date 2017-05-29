@@ -1,0 +1,8 @@
+fieldset input[type=text], fieldset input[type=password], fieldset select, fieldset textarea {
+    background: rgba(0, 0, 0, 0.1);
+    color: #333;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    z-index: 100;
+}

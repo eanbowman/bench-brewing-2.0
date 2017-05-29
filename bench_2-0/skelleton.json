@@ -1,0 +1,11 @@
+{
+    "packages": [
+        "http://code.jquery.com/jquery-latest.js",
+        "http://code.jquery.com/ui/1.11.4/jquery-ui.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/jquery.gsap.min.js"
+    ],
+    "modules": [
+        
+    ]
+}

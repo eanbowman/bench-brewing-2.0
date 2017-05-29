@@ -1,0 +1,16 @@
+[
+	{
+		"title": "Testing 1",
+		"date_added": "Nov 19, 1980"
+	},
+	{
+		"title": "Testing 2",
+		"date_added": "SEpt 19, 1980"
+	},
+	{
+		"title": "Testing 3",
+		"author": "Testing Author 3",
+		"date_added": "Nov 04, 1980",
+		"content": "This is my content"
+	}
+]

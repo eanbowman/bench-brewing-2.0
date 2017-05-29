@@ -1,0 +1,125 @@
+$break-small: 480px;
+$break-414: 414px;
+$break-medium: 800px;
+$break-large: 1024px;
+body.splash {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background: #dcd7d2 no-repeat;
+    overflow: hidden;
+    h1 {
+        font-family: "Arvo", serif;
+        font-size: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 25px;
+        font-weight: bold;
+        @media screen and (max-width: $break-small) {
+            font-size: 30px;
+            padding: 15px;
+            white-space: nowrap;
+        }
+        @media screen and (max-width: $break-medium) {
+            font-size: 30px;
+        }
+    }
+    nav {
+        position: absolute;
+        top: 65px;
+        left: 50px;
+        a {
+            font-family: "Arvo", serif;
+            font-size: 18px;
+        }
+        @media screen and (max-width: $break-small) {
+            top: 80px;
+        }
+    }
+    div.social-icons {
+        position: absolute;
+        right: 40px;
+        top: 30px;
+        > a {
+            padding: 5px;
+        }
+        @media screen and (max-width: $break-small) {
+            top: 40px;
+        }
+    }
+    div.logo {
+        position: absolute;
+        background: url('images/logo.png') no-repeat;
+        background-size: 100% auto;
+        width: 400px;
+        height: 275px;
+        margin: auto;
+        top: 50%;
+        left: 50%;
+        margin-top: -150px;
+        margin-left: -200px;
+        text-indent: -5000px;
+        @media screen and (max-width: $break-414) and (orientation: landscape) {
+            width: 300px;
+            margin-left: -150px;
+            margin-top: -75px;
+        }
+        @media screen and (max-width: $break-medium) {
+            width: 300px;
+            margin-left: -150px;
+            margin-top: -100px;
+        }
+        @media screen and (max-width: $break-small) {
+            width: 50%;
+            margin-left: -25%;
+            margin-top: -50px;
+        }
+        @media screen and (orientation: landscape) and (max-height: 414px) {
+            width: 200px;
+            margin-left: -100px;
+            margin-top: -50px;
+        }
+        @media screen and (orientation: landscape) and (max-height: 320px) {
+            width: 200px;
+            margin-left: -100px;
+            margin-top: -50px;
+        }
+    }
+    div.tagline {
+        position: absolute;
+        bottom: 0;
+        line-height: 0;
+        width: 100%;
+        img {
+            width: 100%;
+        }
+        p {
+            width: 100%;
+            position: absolute;
+            bottom: 10%;
+            font-family: "Arvo", serif;
+            font-size: 100%;
+            color: #c6c2bc;
+            text-align: center;
+
+            @media screen and (max-width: 1920px) {
+                bottom: 8%;
+                font-size: 230%;
+            }
+            @media screen and (max-width: 1366px) {
+                bottom: 6%;
+                font-size: 200%;
+            }
+
+              @media screen and (max-width:800px) {
+                bottom: 6%;
+                font-size: 120%;
+            }
+            @media screen and (max-width: $break-small) {
+                bottom: 5%;
+                font-size: 10px;
+            }
+        }
+    }
+}

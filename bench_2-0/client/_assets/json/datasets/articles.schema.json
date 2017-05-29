@@ -1,0 +1,29 @@
+{
+	"name": "Articles",
+	"data": "_assets/json/articles.json",
+	"default": "title",
+	"_schema": [
+		{
+			"title": "Title",
+			"name": "title",
+			"type" : "text"
+		},
+		{
+			"title": "Date Added",
+			"name": "date_added",
+			"type" : "date"
+		},
+		{
+			"title": "Author",
+			"name": "author",
+			"type" : "dataset",
+			"resource_schema": "_assets/json/datasets/authors.schema.json",
+			"resource_data": "_assets/json/authors.json"
+		},
+		{
+			"title": "Content",
+			"name": "content",
+			"type" : "richtext"
+		}
+	]
+}

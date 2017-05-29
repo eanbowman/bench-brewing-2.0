@@ -1,0 +1,194 @@
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+ 
+
+* {
+    &.one-column-layout > div.column:first-child {}
+    &.one-column-middle-nav-left-layout > div.column {
+        float: left;
+        margin: 0;
+        min-height: 400px;
+        &:first-child {
+            width: 100px;
+        }
+        &:last-child {
+            width: 390px;
+        }
+    }
+    &.two-column-layout {
+        /*
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    */
+        flex-wrap: wrap;
+        > div.column {
+            align-self: flex-start;
+            float: left;
+            width: 48%;
+            margin-left: 4%;
+            &:nth-child(odd) {
+                margin-left: 0;
+            }
+        }
+    }
+    &.two-column-offset-left-layout > div.column {
+        float: left;
+        width: 75%;
+        margin-left: 0%;
+        &:first-child {
+            width: 25%;
+            margin-left: 0;
+        }
+        div.two-column-offset-left-layout > div.column {
+            float: left;
+            width: 70%;
+            margin-left: 0%;
+            padding-bottom: 50px;
+            &:first-child {
+                width: 25%;
+                margin-right: 5%;
+            }
+        }
+    }
+    &.two-column-offset-left-wide-layout > div.column {
+        float: left;
+        width: 70%;
+        margin-left: 0%;
+        &:first-child {
+            width: 26%;
+            margin-right: 4%;
+        }
+    }
+    &.two-column-offset-right-layout > div.column {
+        float: left;
+        width: 30%;
+        margin-left: 0%;
+        &:first-child {
+            width: 65%;
+            margin-right: 5%;
+        }
+    }
+    &.three-column-layout > div.column {
+        float: left;
+        width: 32%;
+        margin-left: 1%;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    &.three-column-offset-middle-layout > div.column {
+        float: left;
+        width: 24%;
+        margin-left: 0;
+        &:nth-of-type(2) {
+            width: 36%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+    &.three-column-offset-right-layout {
+        line-height: 0;
+        > div.column {
+            float: left;
+            width: 44%;
+            margin-left: 0;
+            &:nth-of-type(3) {
+                width: 12%;
+            }
+        }
+    }
+    &.three-column-offset-left-layout > div.column {
+        float: left;
+        width: 40%;
+        margin-left: 0%;
+        &:first-child {
+            margin-left: 0;
+            width: 20%;
+        }
+    }
+    &.four-column-layout > div.column {
+        float: left;
+        width: 24%;
+        margin-left: 1%;
+        &:first-child {
+            margin-left: 0.5%;
+            width: 24%;
+        }
+    }
+    &.five-column-layout > div.column {
+        float: left;
+        width: 19%;
+        margin-right: 1%;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    &.one-column-layout,
+    &.two-column-layout,
+    &.three-column-layout,
+    &.four-column-layout,
+    &.five-column-layout {
+        @include clearfix();
+    }
+}
+
+nav div.five-column-layout > div.column {
+    &:first-child {
+        width: 24%;
+    }
+    &:nth-child(2) > a {
+        display: block;
+        line-height: 15px;
+    }
+    &:nth-child(3) {
+        width: 14%;
+    }
+}
+
+div.six-column-layout > div.column {
+    float: left;
+    width: 15%;
+    margin-right: 2%;
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.text-two-column {
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 2;
+    /* Firefox */
+    column-count: 2;
+    -webkit-column-gap: 40px;
+    /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px;
+    /* Firefox */
+    column-gap: 40px;
+}
+
+.text-three-column {
+    -webkit-column-count: 3;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 3;
+    /* Firefox */
+    column-count: 3;
+    -webkit-column-gap: 40px;
+    /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px;
+    /* Firefox */
+    column-gap: 40px;
+}
+
+.text-two-column p:first-of-type {
+    margin-top: 0;
+}

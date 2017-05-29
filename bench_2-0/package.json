@@ -1,0 +1,22 @@
+{
+    "name": "bench-brewing-website",
+    "version": "0.0.1",
+    "description": "Bench Brewing Website",
+    "author": "Joey Caughey <joey@massminority.com>",
+    "dependencies": {
+        "gulp": "*",
+        "browser-sync": "*",
+        "gulp-sass": "*",
+        "browserify": "*",
+        "gulp-uglify": "*",
+        "del": "*",
+        "gulp-imagemin": "*",
+        "gulp-concat": "*",
+        "merge2": "*",
+        "gulp-minify-css": "*",
+        "gulp-remote-src": "*",
+        "exec": "*",
+        "gulp-merge-json": "*",
+        "gulp-git": "*"
+    }
+}

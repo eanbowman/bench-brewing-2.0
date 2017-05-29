@@ -1,0 +1,1310 @@
+@import "_mixins";
+a[data-rel=hamburger] {
+    display: none;
+    position: fixed;
+    right: 10px;
+    top: 15px;
+    width: 44px !important;
+    height: 44px !important;
+    z-index: 9005;
+    color: #fff !important;
+    > i {
+        font-size: 40px;
+        color: #000;
+    }
+}
+
+.show-mobile,
+.hide-not-mobile {
+    display: none;
+    visibility: hidden;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-width: 0px) and (max-width: 1336px) {
+    article {
+        section {
+            &#beginning {
+                > video {
+                    z-index: 0;
+                }
+            }
+            &#ourbrewery {
+                div.background {
+                    background-image: url(/_assets/images/bknd/our-brewery.png) no-repeat;
+                }
+                > video {
+                    z-index: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/*
+@media only screen and (min-width: 781px) and (max-width: 1024px) {
+    article {
+        > section {
+            min-width: 1024px;
+            max-width: 1024px;
+            &#home {
+                > div.background {
+                    background-size: 150%;
+                }
+            }
+            &#ourpeople {
+                #staff.on {
+                    max-width: 1024px;
+                }
+            }
+        }
+    }
+}
+*/
+
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
+
+    section#ourvision{
+        min-height: 800px !important;
+    }
+
+    article section.parallax {
+        div.background {
+            background-attachment: initial !important;
+        }
+    }
+    .show-mobile {
+        display: block;
+        visibility: visible;
+    }
+    a[data-rel=hamburger] {
+        display: block;
+    }
+    html,
+    body,
+    header,
+    article {
+        min-width: 100% !important;
+    }
+    body,
+    html {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0%;
+        margin: 0;
+        //overflow-x: hidden;
+        //overflow-y: auto;
+    }
+    header {
+        height: 70px;
+        padding: 5px;
+        background: #ecf3f8;
+        top: 0;
+        > nav {
+            background: #fff;
+            display: none;
+            position: fixed;
+            top: 70px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 7000;
+            overflow-y: auto;
+            span {
+                display: block;
+                > a {
+                    &:link,
+                    &:visited,
+                    &:active {
+                        display: block;
+                        padding: 15px;
+                        color: #333;
+                        text-align: center;
+                        font-size: 20px;
+                        border-top: solid 1px rgba(0, 0, 0, 0.05);
+                    }
+                    &:hover,
+                    &.on {
+                        background: #ecf3f8;
+                    }
+                }
+                > div {
+                    display: block;
+                    top: 0;
+                    position: relative;
+                }
+                &:nth-of-type(4),
+                &:nth-of-type(6) {
+                    > div {
+                        text-align: center;
+                        > a {
+                            display: inline;
+                            margin-right: 8px;
+                            margin-left: 8px;
+                            width: auto;
+                        }
+                    }
+                }
+            }
+        }
+        h1.logo {
+            position: absolute;
+            background: url('/_assets/images/logo.mobile.png') no-repeat;
+            background-size: 100%;
+            @include image-2x("/_assets/images/logo@x2.png",
+            95px,
+            55px);
+            left: 10px;
+            top: 7px;
+            width: 95px;
+            height: 70px;
+        }
+        &.on {
+            > nav {
+                display: block;
+            }
+        }
+        div.social-icons {
+            right: 80px;
+            top: 20px;
+        }
+    }
+    article {
+        > section {
+            div.background {
+                height: 105% !important;
+            }
+            > video {
+                display: none;
+            }
+            &#beginning {
+                height: 700px !important;
+                div.background {
+                    display: block;
+                    background: url(/_assets/images/bknd-beginning.jpg) center center no-repeat;
+                    background-size: auto 100%;
+                    z-index: 1000;
+                }
+                > video {
+                    z-index: 0;
+                }
+                [data-rel=watch-full-video] {
+                    font-size: 16px;
+                }
+            }
+            &#ourbrewery {
+                height: 600px!important;
+            }
+            &#ourhome {
+                height: 600px!important;
+            }
+            &#ourvision {
+                height: 600px!important;
+            }
+            &#ourpeople {
+                height: 1000px;
+                div.inset {
+                    margin-top: -70px;
+                 /*   ul {
+                        right: 180px;
+                        max-width: 700px;
+                        display: inline-block;
+                        top: 100px;
+                        li {
+                            right: -90px;
+                            &:nth-child(3) &:after {
+                                content: "";
+                                display: block;
+                            }
+                            &:nth-child(4),
+                            &:nth-child(5) {
+                                right: -180px;
+                            }
+                        }
+                    } */
+                }
+                #staff {
+                    height: 1000px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    > div {
+                        position: absolute;
+                        top: 0px;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        background-color: #313131;
+                        background-repeat: no-repeat;
+                        overflow-y: auto;
+                        background-position: 0 0px !important;
+                        background-size: 100% auto !important;
+                        > a[data-rel=back] {
+                            top: 30px;
+                            bottom: auto;
+                            left: 30px;
+                            &.left {
+                                left: auto;
+                                right: 30px;
+                            }
+                        }
+                        &#matt,
+                        &#pat,
+                        &#jamie,
+                        &#deesh,
+                        &#alex,
+                        &#mark,
+                        &#joe {
+                            > a[data-rel=back] {
+                                left: 30px;
+                                right: auto;
+                            }
+                        }
+                        > div.callblock {
+                            top: 380px;
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            -webkit-transform: none;
+                            -moz-transform: none;
+                            -ms-transform: none;
+                            position: relative;
+                            > div.box {
+                                width: 100% !important;
+                                max-width: 100% !important;
+                                > h2 {
+                                    width: 100% !important;
+                                    max-width: 100% !important;
+                                    white-space: normal;
+                                    font-size: 24px;
+                                    line-height: 24px;
+                                }
+                            }
+                            &.right {
+                                div.box {
+                                    > h2 {
+                                        left: 0px !important;
+                                        margin: 0;
+                                        margin-right: -25px !important;
+                                        padding: 0;
+                                        padding-right: 25px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#ourbeer {
+                //height: 800px;
+                div.callblock {
+                    position: relative;
+                    transform: none !important;
+                    -webkit-transform: none !important;
+                    -moz-transform: none !important;
+                    -ms-transform: none !important;
+                    top: 0px !important;
+                    left: 0px !important;
+                    width: 100% !important;
+                    div.box {
+                        h2 {}
+                        h3 {
+                            font-size: 18px;
+                            line-height: 22px;
+                            br {
+                                &:nth-of-type(2) {
+                                    display: none;
+                                }
+                            }
+                        }
+                        > em {
+                            background: url(/_assets/images/down-arrow-beer.png) no-repeat;
+                            margin-left: 45px;
+                        }
+                    }
+                }
+                div.slideover {
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    > div {
+                        background-size: 100% 50%;
+                        a[data-rel=back] {
+                            top: 10px;
+                            left: 10px;
+                            right: auto;
+                            bottom: auto;
+                        }
+                        div.callblock {
+                            position: absolute;
+                            top: auto !important;
+                            bottom: 0 !important;
+                            height: auto !important;
+                            font-size: 16px;
+                            line-height: 20px;
+                            > div.box {
+                                //height: 100%;
+                                padding: 30px !important;
+                                text-align: left;
+                                > h2 {
+                                    display: inline-block;
+                                    font-size: 24px;
+                                    line-height: 29px;
+                                    width: 100%;
+                                    margin-left: 0;
+                                    padding-bottom: 0;
+                                    br {
+                                        display: none;
+                                    }
+                                }
+                                div.image {
+                                    left: 50%;
+                                    margin-left: -22%;
+                                    top: -40%;
+                                    width: 170px;
+                                    height: 400px
+                                }
+                            }
+                        }
+                        &:nth-of-type(1) {
+                            div.callblock {
+                                > div.box {
+                                    div.image {
+                                        left: auto;
+                                        right: 50%;
+                                        margin-right: -22%;
+
+                                        a[data-rel=right], a[data-rel=left] {
+                                            color: #333;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                #beers {
+                    position: absolute;
+                    top: 540px;
+                    > a {
+                        width: 165px;
+                        height: 310px;
+                        &:nth-of-type(1) {
+                            left: 10px;
+                            > div {
+                                left: 0;
+                                right: 0;
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            right: 10px;
+                            > div {
+                                left: 0;
+                                right: 0;
+                            }
+                        }
+                        > div {
+                            top: -50px;
+                            white-space: nowrap;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            &#findus {
+                height: 1250px !important;
+            }
+            &#contactus {
+                height: auto !important;
+                padding-bottom: 50px;
+                > section,
+                form {
+                    width: 100%;
+                    height: 50;
+                    float: none;
+                }
+                > section {
+                    height: 400px;
+                    div#map {
+                        height: 400px;
+                    }
+                }
+                form {
+                    width: 100%;
+                    padding: 25px;
+                    * {
+                        box-sizing: border-box;
+                    }
+                    fieldset {
+                        width: 95%;
+                        margin: auto;
+                        >fieldset.text {
+                            min-height: 290px;
+                            > h2,
+                            h3,
+                            p {
+                                display: block;
+                                margin: 0 !important;
+                                padding: 0 !important;
+                                left: auto !important;
+                                right: 0 !important;
+                                width: 100% !important;
+                                margin-bottom: 20px !important;
+                            }
+                            >div {
+                                height: 0px !important
+                            }
+                            > h2 {
+                                font-size: 28px;
+                                line-height: 28px;
+                                white-space: nowrap;
+                                width: auto !important;
+                                padding-right: 45px !important;
+                                right: -45px !important;
+                            }
+                            > h3 {
+                                font-size: 20px;
+                            }
+                            > p {
+                                font-size: 14px;
+                                line-height: 21px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    article > section div.callblock > div.box > p {
+        font-size: 13px !important;
+        line-height: 17px !important;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+    .show-mobile {
+        display: block;
+        visibility: visible;
+    }
+    a[data-rel=hamburger] {
+        display: block;
+    }
+    td {
+        line-height: 26px !important;
+    }
+    article {
+        > section {
+            > div.background {
+                background-size: auto 120% !important;
+                background-repeat: no-repeat;
+            }
+            div.callblock {
+                width: 85% !important;
+                min-width: 85% !important;
+                div.box {
+                    width: 100% !important;
+                    min-width: 100% !important;
+                    padding: 25px !important;
+                    h2 {
+                        display: inline;
+                        width: auto !important;
+                        max-width: 100% !important;
+                        min-width: auto !important;
+                        white-space: nowrap;
+                        font-size: 28px;
+                        line-height: 28px;
+                    }
+                    div.clear {
+                        visibility: hidden;
+                        display: block;
+                        font-size: 0;
+                        line-height: 0;
+                        content: " ";
+                        clear: both;
+                        height: 25px;
+                    }
+                    h3 {
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+                    p {
+                        font-size: 12px;
+                        line-height: 15px;
+                        width: 100% !important;
+                        max-width: 100% !important;
+                        a.btn {
+                            font-size: 12px !important;
+                            padding: 5px !important;
+                            padding-left: 10px !important;
+                            padding-right: 10px !important;
+                            > em {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                &.right {
+                    div.box {
+                        h2 {
+                            margin-left: 0px;
+                            margin-right: -40px !important;
+                            width: auto !important;
+                            max-width: auto !important;
+                            padding: 0;
+                            padding-right: 40px !important;
+                            right: 0px !important;
+                            left: 0px !important;
+                        }
+                    }
+                }
+                &.left {
+                    div.box {
+                        h2 {
+                            left: -25px;
+                            padding-left: 25px;
+                        }
+                    }
+                }
+            }
+            &#home {
+                height: 1200px;
+                > div.logo {
+                    width: 70%;
+                    top: 300px;
+                }
+                div.background {
+                    
+                    background-position: center 70px !important;
+                }
+                div.callblock {
+                    margin-left: 0 !important;
+                    width: 95% !important;
+                    min-width: 95% !important;
+                    top: 50%;
+                    div.box {
+                        h2 {
+                            font-size: 1.5em;
+                            ;
+                            line-height: 1.5em;
+                            white-space: normal;
+                        }
+                    }
+                }
+            }
+            &#ourvision {
+                
+                div.background {
+                    
+                    background-size: auto 100% !important;
+                }
+                
+            }
+            &#beginning {
+                height: 500px;
+                div.background {
+                    display: block;
+                    background: url(/_assets/images/bknd-beginning.jpg) center center no-repeat;
+                    background-size: auto 100%;
+                    z-index: 1000;
+                }
+                > video {
+                    z-index: 0;
+                }
+                [data-rel=watch-full-video] {
+                    font-size: 16px;
+                }
+            }
+            &#ourpeople {
+                div.background {
+                    background-size: cover !important;
+                    background-repeat: no-repeat;
+                }
+                height: auto !important;
+                min-height: 900px;
+                div.inset {
+                    position: relative;
+                    transform: none;
+                    -webkit-transform: none;
+                    -moz-transform: none;
+                    -ms-transform: none;
+                    padding-top: 150px;
+                    padding-bottom: 150px;
+                    width: 100% !important;
+                    top: 0;
+                    left: 0;
+                    > h2,
+                    > h3 {
+                        margin: 0;
+                    }
+                    h2 {
+                        font-size: 28px;
+                        line-height: 28px;
+                    }
+                    h3 {
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+                  /*  ul {
+                        display: block;
+                        width: 60%;
+                        transform: none;
+                        -webkit-transform: none;
+                        -moz-transform: none;
+                        -ms-transform: none;
+                        position: relative;
+                        margin: 0;
+                        left: 50%;
+                        margin-left: -30%;
+                        top: 25px;
+                        > li {
+                            width: 100%;
+                            min-width: 150px;
+                            float: none;
+                            margin-bottom: 20px;
+                            right: 0 !important;
+                        }
+                    } */
+                }
+                #staff {
+                    > div {
+                        > div.callblock {
+                            top: 270px;
+                        }
+                    }
+                }
+            }
+            &#ourbrewery {
+                > video {
+                    //z-index: 0;
+                }
+                div.callblock {
+                    top: 40%;
+                    z-index: 9999;
+                }
+            }
+            &#findus {
+                //height: 520px;
+                div.callblock {
+                    width: 100% !important;
+                    div.box {
+                        padding: 55px!important;
+                        h2 {
+                            width: auto;
+                            max-width: auto;
+                            white-space: nowrap;
+                            @media only screen and (max-width: 480px){
+                               line-height: 65px;
+                            }
+                            
+                        }
+                        h3 {
+                            font-size: 20px;
+                            line-height: 25px;
+                        }
+                        p.buttons {
+                            > a {
+                                font-size: 12px;
+                                //min-width: 45%;
+                                padding: 5px 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            &#footer {
+                height: 230px !important;
+                padding: 20px;
+                div.logo {
+                    margin: 0;
+                    margin-top: 20px;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    background-position: center center;
+                    > span {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        left: 0;
+                        top: 0;
+                        text-align: center;
+                        &.address {
+                            top: 80px;
+                            left: 0;
+                        }
+                        &.contact {
+                            top: 110px;
+                            > div.social-icons {
+                                right: 0;
+                                left: 0;
+                                top: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 781px) and (max-width: 1024px) {
+    article {
+        > section {
+            &#ourpeople {
+                height: 1000px;
+            }
+            &#ourbeer {
+                #beers {
+                   // top: 440px;
+                    > a {
+                        width: 245px;
+                        height: 510px;
+                        &:nth-of-type(1) {
+                            left: 120px;
+                        }
+                        &:nth-of-type(2) {
+                            right: 120px;
+                        }
+                    }
+                }
+                div.slideover {
+                    > div {
+                        a[data-rel=back] {
+                            top: 30px;
+                            left: 30px;
+                        }
+                        div.callblock {
+                            div.box {
+                                padding: 60px 
+                                !important;
+                                div.image {
+                                    left: auto;
+                                    top: -34%;
+                                }
+                            }
+                        }
+                        &:nth-of-type(1) {
+                            div.callblock {
+                                div.box {
+                                    h2 {
+                                        right: 0;
+                                    }
+                                    div.image {
+                                        right: 30%;
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            div.callblock {
+                                div.box {
+                                    div.image {
+                                        right: 10%;
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-of-type(3) {
+                            div.callblock {
+                                div.box {
+                                    h2 {
+                                        right: 0;
+                                    }
+                                    div.image {
+                                        left: 30%;
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-of-type(4) {
+                            div.callblock {
+                                div.box {
+                                    div.image {
+                                        right: 10%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 569px) and (max-width: 768px) and (orientation: portrait) {
+    article {
+        > section {
+            &#home {
+                div.background {
+                    background-position: center 70px;
+                    background-size: auto;
+                }
+                div.callblock {
+                    div.box {
+                        p {
+                            br {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            &#ourbeer {
+                #beers {
+                    //top: 440px;
+                    > a {
+                        width: 225px;
+                        height: 410px;
+
+                        &:nth-of-type(1) {
+                            left: 50px;
+                        }
+                        &:nth-of-type(2) {
+                            right: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Smartphones (landscape) ----------- */
+
+@media only screen and (min-width: 0px) and (max-width: 768px) and (orientation: landscape) {
+    article {
+        section {
+            height: 160%;
+            background-size: auto 120%;
+            > div.callblock {
+                > div.box {
+                    > p {
+                        font-size: 13px !important;
+                        line-height: 17px !important;
+                    }
+                }
+            }
+            &#home {
+                height: 1000px !important;
+                > div.logo {
+                    width: 50%;
+                }
+                > div.callblock.center {
+                    top: 35% !important;
+                    width: 80% !important;
+                    min-width: 80% !important;
+                }
+            }
+            &#ourpeople {
+                height: 1000px !important;
+                div.inset {
+                   /* ul {
+                        display: block;
+                        width: 100%;
+                        position: relative;
+                        margin: 0;
+                        left: 50%;
+                        margin-left: -45%;
+                        top: 25px;
+                        > li {
+                            width: 30%;
+                            min-width: 100px;
+                            float: left;
+                            margin-bottom: 20px;
+                            right: 0 !important;
+                            &:nth-of-type(4),
+                            &:nth-of-type(5) {
+                                right: -70px !important;
+                            }
+                            &.bouncein:nth-of-type(1) {
+                                -webkit-animation-name: none;
+                                animation-name: none;
+                            }
+                        }
+                    } */
+                }
+                #staff {
+                    height: 1000px;
+                    position: absolute;
+                    &.on {
+                        z-index: 9999;
+                    }
+                    > div {
+                        overflow: auto !important;
+                        //position: absolute;
+                        top: 0px;
+                        z-index: 999999999999;
+                        > div.callblock {
+                            //top: 370px
+                        }
+                    }
+                }
+            }
+            &#ourbeer {
+                height: 1000px;
+                div.callblock {
+                    div.box {
+                        h3 {
+                            br {
+                                display: block !important;
+                            }
+                        }
+                    }
+                }
+                div.slideover {
+                    div {
+                        a[data-rel=back] {
+                            top: 30px;
+                            left: 30px;
+
+                            &.left {
+                                left: auto !important;
+                                right: 30px !important;
+                            }
+                        }
+                        div.callblock {
+                            div.box {
+                                padding: 50px !important;
+                            }
+                        }
+                        &:nth-of-type(1) {
+                            div.callblock {
+                                > div.box {
+                                    div.image {
+                                        right: 30%;
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            div.callblock {
+                                > div.box {
+                                    div.image {
+                                        right: 8%;
+                                        left: auto;
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-of-type(3) {
+                            div.callblock {
+                                > div.box {
+                                    div.image {
+                                        left: 30%;
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-of-type(4) {
+                            div.callblock {
+                                > div.box {
+                                    div.image {
+                                        right: 8%;
+                                        left: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                #beers {
+                    height: 1000px;
+                    top: 440px;
+                    a {
+                        &:nth-of-type(1) {
+                            left: 60px;
+                        }
+                        &:nth-of-type(2) {
+                            right: 60px;
+                        }
+                    }
+                }
+            }
+            &#findus {
+                min-height: 1250px !important;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+    html,
+    body,
+    header,
+    article,
+    article >section {
+        min-width: 320px;
+        max-width: 480px;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 414px) {
+    html,
+    body,
+    header,
+    article,
+    article >section {
+        max-width: 414px;
+    }
+    article {
+        > section {
+            &#home {
+                div.background {
+                    background-position: center 70px !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 320px) {
+    html,
+    body {
+        /*
+        overflow-x: hidden;
+        */
+    }
+    html,
+    body,
+    header,
+    article,
+    article >section {
+        width: 320px;
+    }
+    header {
+        div.social-icons {
+            display: none;
+        }
+    }
+    article {
+        > section {
+            div.callblock {
+                div.box {
+                    h2 {
+                        font-size: 24px;
+                        line-height: 28px;
+                    }
+                    h3 {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                    p {
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+                }
+            }
+            &#home {
+                height: 1000px !important;
+                div.logo {
+                    width: 50%;
+                    top: 340px
+                }
+                div.callblock {
+                    top: 46%;
+                    height: 100% !important;
+                    div.box {
+                        h2 {
+                            font-size: 16px;
+                            line-height: 20px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                            line-height: 16px;
+                        }
+                        p {
+                            > a {
+                                > span {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#ourpeople {
+                > #staff {
+                    > div {
+                      
+                        > div.callblock {
+                            top: 230px;
+                            > h2 {
+                                display: inline;
+                                width: 100%;
+                                max-width: 100%;
+                                left: 0;
+                                right: 0;
+                            }
+                            &.right {
+                                h2 {
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#ourbeer {
+                div.callblock {
+                    position: relative;
+                    transform: none !important;
+                    -webkit-transform: none !important;
+                    -moz-transform: none !important;
+                    -ms-transform: none !important;
+                    top: 0px !important;
+                    left: 0px !important;
+                    width: 100% !important;
+                    div.box {
+                        h2 {}
+                        h3 {
+                            font-size: 18px;
+                            line-height: 22px;
+                            br {
+                                &:nth-of-type(2) {
+                                    display: none;
+                                }
+                            }
+                        }
+                        em {
+                            line-height: 17px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                div.slideover {
+                    > div {
+                        div.callblock {
+                            > div.box {
+                                > ul,
+                                > p {
+                                    font-size: 12px !important;
+                                    line-height: 19px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+                #beers {
+                    position: absolute;
+                    top: 440px;
+                    > a {
+                        width: 135px;
+                        height: 260px;
+                        &:nth-of-type(1) {
+                            left: 10px;
+                            > div {
+                                left: 0;
+                                right: 0;
+                            }
+                            > em {
+                                font-size: 9px;
+                                line-height: 12px;
+                                top: 150px;
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            right: 30px;
+                            > div {
+                                left: 0;
+                                right: 0;
+                            }
+                        }
+                        > div {
+                            top: -50px;
+                            white-space: nowrap;
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+            &#findus {
+                div.callblock {
+                    div.box {
+                        h3 {
+                            font-size: 16px;
+                        }
+                        p.buttons {
+                            > a {
+                                font-size: 12px;
+                                min-width: 93px;
+                                padding: 5px;
+                                > small {
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#contactus {
+                form {
+                    fieldset {
+                        > fieldset {
+                            &.text {
+                                h2 {
+                                    font-size: 30px;
+                                    line-height: 36px;
+                                    margin-bottom: 0 !important;
+                                    margin-left: 0px;
+                                    margin-right: -40px !important;
+                                    padding-right: 40px !important;
+                                    width: auto !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Smartphones (portrait) ----------- */
+
+@media only screen and (max-width: 500px) {}
+
+@media only screen and (min-width: 781px) and (max-width: 869px) {}
+
+
+/* iPads (portrait and landscape) ----------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {}
+
+
+/* iPads (landscape) ----------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+
+
+/* iPads (portrait) ----------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {}
+
+
+/* Desktops and laptops ----------- */
+
+@media only screen and (min-width: 1224px) {}
+
+
+/* Large screens ----------- */
+
+@media only screen and (min-width: 1824px) {}
+
+@media only screen and (max-width: 780px) {}
+
+
+@media only screen and (max-width: 568px) and (max-height: 320px) {
+    article{
+        section#ourvision{
+            min-height: 250% !important;
+        }
+    }
+}
