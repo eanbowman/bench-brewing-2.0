@@ -15,9 +15,10 @@ Step 3 - Install local Gulp.js
 cd bench_2-0/
 npm install gulp
 
-Step 4 - Get Skeleton (It's not included, and doesn't exist as a node repository)
-https://github.com/dstroot/skeleton
+Step 4 - Copy the contents of bench2_0/node_overrides over top of bench2_0/node_modules
 
-Step ? - Run local gulp
+Overwrite any files in the destination. These are custom node modules you need.
+
+Step 5 - Run local gulp (this will start the server)
 
 gulp
