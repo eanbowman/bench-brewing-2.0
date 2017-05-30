@@ -19,6 +19,23 @@ Step 4 - Copy the contents of bench2_0/node_overrides over top of bench2_0/node_
 
 Overwrite any files in the destination. These are custom node modules you need.
 
-Step 5 - Run local gulp (this will start the server)
+Step 5 - Install any missing node modules
+
+Try running the following:
+
+gulp
+
+The server might fail to start. This is due to missing modules.
+
+The output will be like: 
+Error: Cannot find module 'gulp-git'
+
+The name in quotes will change each time you run gulp. You may have to do this multiple times.
+
+npm install gulp-git
+
+Then go back to Step 5 until it runs properly.
+
+Step 6 - Run local gulp (this will start the server, run this any time you want to start working on it)
 
 gulp
