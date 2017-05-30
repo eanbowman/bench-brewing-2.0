@@ -19,23 +19,27 @@ Step 4 - Copy the contents of bench2_0/node_overrides over top of bench2_0/node_
 
 Overwrite any files in the destination. These are custom node modules you need.
 
-Step 5 - Install any missing node modules
+Step 5 - Unzip node_modules.zip into brew2_0 folder over top of any existing node_modules folder §
 
-Try running the following:
+Step 6 - Install any missing node modules (should not be necessary but added just in case)
+
+	Try running the following:
+
+	gulp
+
+	The server might fail to start. This is due to missing modules.
+
+	The output will be like: 
+	Error: Cannot find module 'gulp-git'
+
+	The name in quotes will change each time you run gulp. You may have to do this multiple times.
+
+	npm install gulp-git
+
+	Then go back to Step 6 until it runs properly.
+
+Step 7 - Run local gulp (this will start the server, run this any time you want to start working on it)
 
 gulp
 
-The server might fail to start. This is due to missing modules.
-
-The output will be like: 
-Error: Cannot find module 'gulp-git'
-
-The name in quotes will change each time you run gulp. You may have to do this multiple times.
-
-npm install gulp-git
-
-Then go back to Step 5 until it runs properly.
-
-Step 6 - Run local gulp (this will start the server, run this any time you want to start working on it)
-
-gulp
+§ The node modules are ignored because they can cause issues with git in various OSes if included in the repository. The filesystem links don't get created properly if they are simply checked out between Windows and MacOS for some reason. Have to figure out why that is, but for now keeping them in a ZIP file will have to do.
