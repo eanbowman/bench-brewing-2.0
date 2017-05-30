@@ -98,6 +98,10 @@ img {
     -webkit-transition: all .5s; /* Safari */
     transition: all .5s;
 }
+.ani5{
+    -webkit-transition: all 5s; /* Safari */
+    transition: all 5s;
+}
 //
 .right-line{
         position: relative;
@@ -168,10 +172,10 @@ img {
         margin: auto;
 
         @media only screen and (min-width: 1024px){
-            min-width: 1600px;
+            min-width: 1700px;
         }
         @media only screen and (min-width: 1366px){
-            min-width: 1800px;
+            min-width: 1900px;
         }
         @media only screen and (min-width: 1800px){
             min-width: 2500px;
@@ -194,6 +198,9 @@ img {
     padding: 0;
     font-size: 13px;
     z-index: 1003;
+    @media only screen and (max-width: 1080px){
+            font-size: 10px;
+    }
 
     .nav-navLeft{
         float: left;
@@ -209,6 +216,7 @@ img {
             float: left;
             background-color: rgba(0, 0, 0, .5);
             text-transform: uppercase;
+            cursor: pointer;
         }
 
         .nav-logo{
@@ -300,6 +308,7 @@ img {
                     position: relative ;
                     top: 17.5px;
                     padding-right: 15px;
+                    cursor: pointer;
                 }
                 .nav-socialButtons{
                     position: relative;
@@ -307,6 +316,8 @@ img {
                     top: 15px;
                     /* padding-right: 15px; */
                     width: 200px;
+                    cursor: pointer;
+                    //
                     > a {
                         background: #313131;
                         position: relative;
@@ -348,7 +359,7 @@ img {
             position: absolute;
             top: -500px;
             width: 100%;
-             .nav-sectionLabel{
+             .nav-sectionLabelM{
                 width: 100%;
                 color: #313131;
                 background-color: white;
@@ -545,6 +556,7 @@ img {
 
     .brew-heroCopy{
         background-color: #313131;
+        opacity: 0;
 
         h1{
             padding-top:50px;
@@ -563,6 +575,7 @@ img {
     }
     .right-line{
         background-color: white;
+        width: 0;
     }
 }
 #brewSketches{
@@ -578,6 +591,20 @@ img {
     }
 
     .brew-sketch{
+        ul{
+            li{
+                color: #313131;
+                font-weight: 700;  
+            }
+        }
+
+        p{
+            font-size: 14px;
+            color: #313131;
+            font-weight: 700;
+            padding: 25px;
+
+        }
         img {
             position: relative;
             display: block;
@@ -600,10 +627,17 @@ img {
 }
 
 #homeShopTeaser.brewTeaser{
-    margin-top: -5%;
-    @media only screen and (max-width: 768px){
-        margin-top: -12%;
+    margin-top: -7%;
+     @media only screen and (max-width: 1024px){
+        margin-top: -15%;
     }
+    @media only screen and (max-width: 768px){
+        margin-top: -25%;
+    }
+    @media only screen and (max-width: 525px){
+        margin-top: -40%;
+    }
+   
 }
 
 // Footer Code

@@ -47,5 +47,21 @@ $(document).ready(function() {
     $('.nav-menuDropDown').mouseleave(function(){
         $('.nav-menuDropDown').css('top','-500px');
     });
+    //
+    $('.nav-sectionLabel').mouseover(function(e){
+        $(e.target).css('background-color', 'rgba(0,0,0,1.9)');
+    });
+    //
+     $('.nav-sectionLabel').mouseout(function(e){
+        $(e.target).css('background-color', 'rgba(0,0,0,.5)');
+    });
+    //
+    $('.nav-sectionLabelM').mouseover(function(e){
+        $(e.target).css('background-color', 'lightgrey');
+    });
+    //
+     $('.nav-sectionLabelM').mouseout(function(e){
+        $(e.target).css('background-color', 'white');
+    });
 
 })
