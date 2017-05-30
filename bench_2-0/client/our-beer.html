@@ -59,7 +59,7 @@
     
 </head>
 
-<body>
+<body id="our-beer-page">
     <!-- Google Tag Manager -->
     <noscript>
         <iframe src="//www.googletagmanager.com/ns.html?id=GTM-K69K3J" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -84,7 +84,7 @@
     <!--  Start Main HTML -->
 
     <!-- Nav Parralax Background should stay out of bootstrap container -->
-    <div class="beerBackground ani_5">
+    <div class="beerBackground js-beer-background ani_5">
     </div>
      <!-- Menu - 960 -->
     <div id="nav-mobileNavHolder">
@@ -177,7 +177,7 @@
         </div>
     </div>
     <!-- Parralax Background should stay out of bottstrap container -->
-    <div class="container-fluid">
+    <div class="container-fluid js-beer-content">
 
    
         <!-- Beer Section Hero Copy -->
@@ -197,69 +197,57 @@
         <!-- Beer Listing Module - shows all of the beers with links to the individual ones -->
         <div id="beerListing">
             <ul class="beer-listing">
-                <li class="beer-listing-item" data-type="citra-grove"> 
+                <li class="beer-listing-item beer-balls-falls" data-type="balls-falls"> 
                     <!-- this part gets styled with the outer circle -->
                     <a class="js-beer-type-link" href="javascript:void(0);" data-type="citra-grove">
                         <!-- beer image is a background of this a tag -->
                     </a>
-                    <!-- this text is wrapped in a circle using CSS3 -->
-                    <span class="beer-availability-text">Available whenever</span>
                 </li>
-                <li class="beer-listing-item" data-type="citra-grove"> 
+                <li class="beer-listing-item beer-twenty-mile" data-type="twenty-mile"> 
                     <!-- this part gets styled with the outer circle -->
-                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="citra-grove">
+                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="twenty-mile">
                         <!-- beer image is a background of this a tag -->
                     </a>
-                    <!-- this text is wrapped in a circle using CSS3 -->
-                    <span class="beer-availability-text">Available whenever</span>
                 </li>
-                <li class="beer-listing-item" data-type="citra-grove"> 
+                <li class="beer-listing-item beer-clean-slate" data-type="clean-slate"> 
                     <!-- this part gets styled with the outer circle -->
-                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="citra-grove">
+                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="clean-slate">
                         <!-- beer image is a background of this a tag -->
                     </a>
-                    <!-- this text is wrapped in a circle using CSS3 -->
-                    <span class="beer-availability-text">Available whenever</span>
                 </li>
-                <li class="beer-listing-item" data-type="citra-grove"> 
+                <li class="beer-listing-item beer-citra-grove" data-type="citra-grove"> 
                     <!-- this part gets styled with the outer circle -->
                     <a class="js-beer-type-link" href="javascript:void(0);" data-type="citra-grove">
                         <!-- beer image is a background of this a tag -->
                     </a>
-                    <!-- this text is wrapped in a circle using CSS3 -->
-                    <span class="beer-availability-text">Available whenever</span>
                 </li>
-                <li class="beer-listing-item" data-type="citra-grove"> 
+                <li class="beer-listing-item beer-mosaic-grove" data-type="mosaic-grove"> 
                     <!-- this part gets styled with the outer circle -->
-                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="citra-grove">
+                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="mosaic-grove">
                         <!-- beer image is a background of this a tag -->
                     </a>
-                    <!-- this text is wrapped in a circle using CSS3 -->
-                    <span class="beer-availability-text">Available whenever</span>
                 </li>
-                <li class="beer-listing-item" data-type="citra-grove"> 
+                <li class="beer-listing-item beer-simcoe-grove" data-type="simcoe-grove"> 
                     <!-- this part gets styled with the outer circle -->
-                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="citra-grove">
+                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="simcoe-grove">
                         <!-- beer image is a background of this a tag -->
                     </a>
-                    <!-- this text is wrapped in a circle using CSS3 -->
-                    <span class="beer-availability-text">Available whenever</span>
+                    
+                    <span class="beer-availability-text"></span>
                 </li>
-                <li class="beer-listing-item" data-type="citra-grove"> 
+                <li class="beer-listing-item beer-stone-road" data-type="stone-road"> 
                     <!-- this part gets styled with the outer circle -->
-                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="citra-grove">
+                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="stone-road">
                         <!-- beer image is a background of this a tag -->
                     </a>
-                    <!-- this text is wrapped in a circle using CSS3 -->
-                    <span class="beer-availability-text">Available whenever</span>
                 </li>
-                <li class="beer-listing-item" data-type="citra-grove"> 
+                <li class="beer-listing-item beer-cellar-garde" data-type="cellar-garde"> 
                     <!-- this part gets styled with the outer circle -->
-                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="citra-grove">
+                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="cellar-garde">
                         <!-- beer image is a background of this a tag -->
                     </a>
-                    <!-- this text is wrapped in a circle using CSS3 -->
-                    <span class="beer-availability-text">Available whenever</span>
+                    
+                    <span class="beer-draught-text"></span>
                 </li>
             </ul>
         </div>
@@ -295,96 +283,34 @@
             </div>
             <div class="col-sm-1 col-xs-1"></div>
         </div>
-
     </div>
 
 <!-- Page Specific Javascript -->
 
-    <script>
-
-        /*global jQuery */
-        /*!
-        * Lettering.JS 0.7.0
-        *
-        * Copyright 2010, Dave Rupert http://daverupert.com
-        * Released under the WTFPL license
-        * http://sam.zoy.org/wtfpl/
-        *
-        * Thanks to Paul Irish - http://paulirish.com - for the feedback.
-        *
-        * Date: Mon Sep 20 17:14:00 2010 -0600
-        */
+    <script type="text/javascript">
         (function($, window, document) {
             $(function() {
-
-                function injector(t, splitter, klass, after) {
-                    var text = t.text()
-                    , a = text.split(splitter)
-                    , inject = '';
-                    if (a.length) {
-                        $(a).each(function(i, item) {
-                            inject += '<span class="'+klass+(i+1)+'" aria-hidden="true">'+item+'</span>'+after;
-                        });
-                        t.attr('aria-label',text)
-                        .empty()
-                        .append(inject)
-
-                    }
-                }
-
-
-                var methods = {
-                    init : function() {
-
-                        return this.each(function() {
-                            injector($(this), '', 'char', '');
-                        });
-
-                    },
-
-                    words : function() {
-
-                        return this.each(function() {
-                            injector($(this), ' ', 'word', ' ');
-                        });
-
-                    },
-
-                    lines : function() {
-
-                        return this.each(function() {
-                            var r = "eefec303079ad17405c889e092e105b0";
-                            // Because it's hard to split a <br/> tag consistently across browsers,
-                            // (*ahem* IE *ahem*), we replace all <br/> instances with an md5 hash
-                            // (of the word "split").  If you're trying to use this plugin on that
-                            // md5 hash string, it will fail because you're being ridiculous.
-                            injector($(this).children("br").replaceWith(r).end(), r, 'line', '');
-                        });
-
-                    }
-                };
-
-                $.fn.lettering = function( method ) {
-                    // Method calling logic
-                    if ( method && methods[method] ) {
-                        return methods[ method ].apply( this, [].slice.call( arguments, 1 ));
-                    } else if ( method === 'letters' || ! method ) {
-                        return methods.init.apply( this, [].slice.call( arguments, 0 ) ); // always pass an array
-                    }
-                    $.error( 'Method ' +  method + ' does not exist on jQuery.lettering' );
-                    return this;
-                };
-
                 function animate() {
                     requestAnimFrame(animate);
                     draw();
                 }
 
+                
                 function draw() {
                     
                 };
 
                 animate();
+
+                function onResize() {
+                    var beerContentHeight = $('.js-beer-content').height();
+
+                    $('.js-beer-background').height(beerContentHeight + 150);
+                }
+                onResize();
+                $(window).resize(function() {
+                    onResize();
+                });
 
                 // Render Availability Text on Circle
                 $("#beerListing .beer-availability-text").lettering();
