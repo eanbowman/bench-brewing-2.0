@@ -80,7 +80,7 @@ $colour-dark-grey: #313131;
 }
 
 .beerDisplayBackground {
-    background-image: url("/_assets/images/bknd-paper-clean.png");
+    background-image: url("/_assets/images/beers/bknd-details-balls-falls.jpg");
     background-size: cover;
     background-position: bottom left;
     position: absolute;
@@ -96,8 +96,7 @@ $colour-dark-grey: #313131;
     width: 100%;
 
     img {
-        bottom: 0px;
-        position: absolute;
+        width: initial;
     }
 }
 
@@ -131,17 +130,13 @@ $colour-dark-grey: #313131;
 }
 .beerPreviousArrow {
     background: url("/_assets/images/beers/arrow-left.png") 0px 0px no-repeat;
+    display: block;
     height: 32px;
-    left: 220px;
-    position: absolute;
-    top: 450px;
     width: 32px;
 }
 .beerNextArrow {
     background: url("/_assets/images/beers/arrow-right.png") 0px 0px no-repeat;
+    display: block;
     height: 32px;
-    left: 650px;
-    position: absolute;
-    top: 450px;
     width: 32px;
 }
