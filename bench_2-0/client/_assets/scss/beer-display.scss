@@ -39,6 +39,11 @@ $colour-dark-grey: #313131;
         padding: 5px 10px;
         position: absolute;
         top: 100px;
+
+        .back-arrow {
+            font-size: 24px;
+            line-height: 18px;
+        }
     }
 }
 .hero-background {
