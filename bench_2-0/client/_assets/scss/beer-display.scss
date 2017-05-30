@@ -1,0 +1,30 @@
+/* beer-display.scss
+ *
+ * For the individual beer display pages
+ */
+
+@keyframes slideup {
+    from {top: 100%;}
+    to {top: 0%;}
+}
+
+.slide-up {
+	animation: slideup 5s once;
+}
+
+.beerDisplayBackground {
+	background-image: url("/_assets/images/bknd-paper-clean.png");
+	background-size: cover;
+	background-position: bottom left;
+	position: absolute;
+	width: 100%;
+	z-index: 0;
+}
+
+.beerDisplay {
+	width: 100%;
+}
+
+.balls-falls {
+
+}

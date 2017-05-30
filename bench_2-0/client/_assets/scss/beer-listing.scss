@@ -120,14 +120,18 @@ $width-large-column: 970px;
 #find-a-pint {
   background-color: $colour-dark-grey;
   margin-top: 80px;
-  padding: 50px 0px;
+  padding: 50px 0px 70px 0px;
   position: relative;
   z-index: 1;
 
   .find-a-pint-copy {
     max-width: 675px;
-    margin: 0px auto;
+    margin: 50px auto;
     width: 100%;
+
+    p {
+      margin-bottom: 30px;
+    }
   }
 }
 #google-maps-pints {
