@@ -13,17 +13,19 @@ $beer-badge-inner-width: 190px;
 $width-large-column: 970px;
 
 #our-beer-page {
-  background-color: $colour-dark-grey;
-  min-height: 2238px;
-
   .beerBackground {
     background: url("/_assets/images/bknd-ourbeer-paper.png") 0px 0px no-repeat;
     background-size: cover;
     height: 1430px;
     position: absolute;
     width: 100%;
-    z-index: 0;
+    z-index: 10;
   }
+}
+
+#our-beer-container {
+  position: relative;
+  z-index: 101;
 }
 
 #beerHeroCopy {
@@ -113,5 +115,25 @@ $width-large-column: 970px;
     height: 100%;
     width: 100%;
   }
-    
+}
+
+#find-a-pint {
+  background-color: $colour-dark-grey;
+  margin-top: 100px;
+  padding: 50px 0px;
+  position: relative;
+  z-index: 1;
+
+  .find-a-pint-copy {
+    max-width: 675px;
+    margin: 0px auto;
+    width: 100%;
+  }
+}
+#google-maps-pints {
+  background-color: white;
+  margin: 0px auto;
+  max-width: 1048px;
+  height: 410px;
+  width: 100%;
 }
