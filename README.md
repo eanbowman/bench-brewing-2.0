@@ -12,8 +12,8 @@ Now type ‘npm install -g gulp’ this will install Gulp.js globally on your sy
 
 Step 3 - Install local Gulp.js
 
-cd bench_2-0/
-npm install gulp
+	cd bench_2-0/
+	npm install gulp
 
 Step 4 - Copy the contents of bench2_0/node_overrides over top of bench2_0/node_modules
 
@@ -40,6 +40,6 @@ Step 6 - Install any missing node modules (should not be necessary but added jus
 
 Step 7 - Run local gulp (this will start the server, run this any time you want to start working on it)
 
-gulp
+	gulp
 
 § The node modules are ignored because they can cause issues with git in various OSes if included in the repository. The filesystem links don't get created properly if they are simply checked out between Windows and MacOS for some reason. Have to figure out why that is, but for now keeping them in a ZIP file will have to do.
