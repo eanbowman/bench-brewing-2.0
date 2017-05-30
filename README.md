@@ -6,13 +6,16 @@ Head on over to http://nodejs.org and click install – this should automagicall
 
 Step 2 – Install Gulp.js Globally
 
-Open the command prompt – (run cmd) then type 
+Open the command prompt – (run cmd) then type
+
 	npm
 
 If there is no  error you’ve installed Node.js correctly. Otherwise make sure you close and reopen command prompt if it was open during install. Or try rebooting – reinstalling, the usual.
 
 Now type:
+
 	npm install -g gulp
+
 This will install Gulp.js globally on your system. It will enable you to run the ‘gulp’ command in your command prompt.
 
 Step 3 - Install Gulp.js Locally
