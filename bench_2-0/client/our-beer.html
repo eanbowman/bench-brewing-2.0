@@ -84,10 +84,7 @@
     <!--  Start Main HTML -->
 
     <!-- Nav Parralax Background should stay out of bootstrap container -->
-    <div class="brewBackground ani_5">
-        <div class="timelapse">
-            <iframe src="https://player.vimeo.com/video/219213692?color=763d1c&title=0&byline=0&portrait=0&autoplay=1" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
+    <div class="beerBackground ani_5">
     </div>
      <!-- Menu - 960 -->
     <div id="nav-mobileNavHolder">
@@ -190,15 +187,95 @@
                 <p>The beer from Ontario’s wine country. Bench Brewing beer is a unique combination of the farmhouse approach to craft brewing and the local winemaking tradition of the Niagara region. In Ontario’s fruit land, the fertile ecosystem of the land will impart a unique “terroir” for our beer, just as it does for wine.</p>
             </div>
 
-            <div class="col-sm-12 col-xs-12 beer-heroCopy ani_5 beer-balls-falls hidden">
+            <div class="col-sm-12 col-xs-12 beer-heroCopy ani_5 hidden" data-type="citra-grove">
                 <a href="#beer-main">BACK</a>
                 <h1>CITRA GROVE DRY HOPPED SOUR</h1>
                 <p>Citra Grove is a bright and hazy dry hopped sour. Dry, tart and lightly funky, this ale is fermented with our house culture of yeasts, lactobacillus and brettanomyces, and is liberally dry hopped with Citra. With notes of orange, pineapple and melon, Citra Grove has a tangy acidity and a subtle earthiness. Pairs exceptionally well with spicy foods.</p>
             </div>
         </div>
-        <!-- Beer Display Module -->
-        <div id="beerDisplay" class="row ani_5">
 
+        <!-- Beer Listing Module - shows all of the beers with links to the individual ones -->
+        <div id="beerListing">
+            <ul class="beer-listing">
+                <li class="beer-listing-item" data-type="citra-grove"> 
+                    <!-- this part gets styled with the outer circle -->
+                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="citra-grove">
+                        <!-- beer image is a background of this a tag -->
+                    </a>
+                    <!-- this text is wrapped in a circle using CSS3 -->
+                    <span class="beer-availability-text">Available whenever</span>
+                </li>
+                <li class="beer-listing-item" data-type="citra-grove"> 
+                    <!-- this part gets styled with the outer circle -->
+                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="citra-grove">
+                        <!-- beer image is a background of this a tag -->
+                    </a>
+                    <!-- this text is wrapped in a circle using CSS3 -->
+                    <span class="beer-availability-text">Available whenever</span>
+                </li>
+                <li class="beer-listing-item" data-type="citra-grove"> 
+                    <!-- this part gets styled with the outer circle -->
+                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="citra-grove">
+                        <!-- beer image is a background of this a tag -->
+                    </a>
+                    <!-- this text is wrapped in a circle using CSS3 -->
+                    <span class="beer-availability-text">Available whenever</span>
+                </li>
+                <li class="beer-listing-item" data-type="citra-grove"> 
+                    <!-- this part gets styled with the outer circle -->
+                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="citra-grove">
+                        <!-- beer image is a background of this a tag -->
+                    </a>
+                    <!-- this text is wrapped in a circle using CSS3 -->
+                    <span class="beer-availability-text">Available whenever</span>
+                </li>
+                <li class="beer-listing-item" data-type="citra-grove"> 
+                    <!-- this part gets styled with the outer circle -->
+                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="citra-grove">
+                        <!-- beer image is a background of this a tag -->
+                    </a>
+                    <!-- this text is wrapped in a circle using CSS3 -->
+                    <span class="beer-availability-text">Available whenever</span>
+                </li>
+                <li class="beer-listing-item" data-type="citra-grove"> 
+                    <!-- this part gets styled with the outer circle -->
+                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="citra-grove">
+                        <!-- beer image is a background of this a tag -->
+                    </a>
+                    <!-- this text is wrapped in a circle using CSS3 -->
+                    <span class="beer-availability-text">Available whenever</span>
+                </li>
+                <li class="beer-listing-item" data-type="citra-grove"> 
+                    <!-- this part gets styled with the outer circle -->
+                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="citra-grove">
+                        <!-- beer image is a background of this a tag -->
+                    </a>
+                    <!-- this text is wrapped in a circle using CSS3 -->
+                    <span class="beer-availability-text">Available whenever</span>
+                </li>
+                <li class="beer-listing-item" data-type="citra-grove"> 
+                    <!-- this part gets styled with the outer circle -->
+                    <a class="js-beer-type-link" href="javascript:void(0);" data-type="citra-grove">
+                        <!-- beer image is a background of this a tag -->
+                    </a>
+                    <!-- this text is wrapped in a circle using CSS3 -->
+                    <span class="beer-availability-text">Available whenever</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Beer Display Module - shows an individual beer and its stats -->
+        <div id="beerDisplay" class="row ani_5 hidden">
+            <a href="javascript:void(0);" class="beer-list-previous-btn"></a>
+            <a href="javascript:void(0);" class="beer-list-next-btn"></a>
+            <ul class="beer-list">
+                <li class="beer-list-item" data-type="citra-grove">
+                    <div class="beer-list-navigation">
+                    </div>
+                    <div class="beer-list-info">
+                    </div>
+                </li>
+            </ul>
         </div>
         
         <!-- Footer section -->
@@ -224,124 +301,92 @@
 <!-- Page Specific Javascript -->
 
     <script>
-        $(function() {
-        
-        function animate() {
-        //if(!isMobile){
-            requestAnimFrame(animate);
-            draw();
-        //}
-        }
 
-        function draw() {
-            
-            // Set offsets and Target for animation and Parallax
-            var paraPos = ($(window).scrollTop()/15);
-            //
-            var shopParaOffest = $('#homeShopTeaser').offset().top;
-            //
-            var lineOffset = $('.right-line').offset().top -800;
-            var lineDifference = $(window).scrollTop() - lineOffset;
-            //
-            //var beerLrnOffest = $('.home-beerLrnImg').offset().top -800;
-            //var beerLrnDifference = $(window).scrollTop() - beerLrnOffest;
-            //
-            var heroCopyOffset = $('.brew-heroCopy').offset().top -750;
-            var heroCopyDifference = $(window).scrollTop() - heroCopyOffset;
-            //
-            //var heroImgOffset = $('.home-heroImg').offset().top -750;
-            //var heroImgDifference = $(window).scrollTop() - heroImgOffset;
-            //
-            var shoplineOffset = $('.center-line').offset().top -900;
-            var shoplineDifference = $(window).scrollTop() - shoplineOffset;
-            //
-            var shopNowOffeset = $('.home-shopLrnImg').offset().top -1000;
-            var shopNowDifference = $(window).scrollTop() - shopNowOffeset;
-            //
-            //Set Limits on Animation so there is no over lap or over growth of animation.
-            //
-            if(lineDifference < 0){
-                lineDifference = 0;
-            } else if(lineDifference > 400){
-                lineDifference = 400;
-            }
-            //
-            if(heroCopyDifference < 0){
-                heroCopyDifference = 0;
-            } else if(heroCopyDifference > 400){
-                heroCopyDifference = 400;
-            }
-            //
-           // if(heroImgDifference < 0){
-           //     heroImgDifference = 0;
-            //} else if(heroImgDifference > 400){
-            //    heroImgDifference = 400;
-           // }
-            //
-            if(shoplineDifference < 0){
-                shoplineDifference = 0;
-            } else if(shoplineDifference > 400){
-                shoplineDifference = 400;
-            }
-            //
-            if(shopNowDifference < 0){
-                shopNowDifference = 0;
-            } else if(shopNowDifference > 400){
-                shopNowDifference = 400;
-            }
-            //
-            var shopParaPos = (75 -(paraPos));
-            if (shopParaPos < 0){
-                //shopParaPos = 0;
-            }
-            
-            //
-            // Set animation values
-            //
-            $('.home-heroCopy').css('opacity', (heroCopyDifference/4)/100);
-            //$('.home-heroImg').css('opacity', (heroImgDifference/4)/100);
-            //
-            //$('.home-beerCopy').css('opacity', (lineDifference/4)/100);
-            //$('.home-beerHeader').css('opacity', (lineDifference/4)/100);
-            $('.right-line').css('width', (lineDifference/4) +'%');
-            $('.right-line').css('right', -(100 - (lineDifference/4)) +'%');
-            //$('.home-beerLrnImg').css('opacity', (lineDifference/4)/100);
-            //
-            $('.home-shopCopy').css('opacity', (shoplineDifference/4)/100);
-            $('.home-shopHeader').css('opacity', (shoplineDifference/4)/100);
-            $('.center-line').css('width', (shoplineDifference/6) +'%');
-            $('.center-line').css('right', -(100 - (shoplineDifference/6)) +'%');
-            $('.home-shopLrnImg').css('opacity', (shopNowDifference/4)/100);
-            //
-            //$('.brewBackground').css('top',-paraPos+'px');
-            $('#homeShopTeaser').css('background-position-y', (shopParaPos)+'px');
+        /*global jQuery */
+        /*!
+        * Lettering.JS 0.7.0
+        *
+        * Copyright 2010, Dave Rupert http://daverupert.com
+        * Released under the WTFPL license
+        * http://sam.zoy.org/wtfpl/
+        *
+        * Thanks to Paul Irish - http://paulirish.com - for the feedback.
+        *
+        * Date: Mon Sep 20 17:14:00 2010 -0600
+        */
+        (function($, window, document) {
+            $(function() {
 
-            //Embed Video Fix
-            var vWidth = $('iframe').width();
-            var vHeight = Math.floor((vWidth/16)*9);
-            $('iframe').height(vHeight);
+                function injector(t, splitter, klass, after) {
+                    var text = t.text()
+                    , a = text.split(splitter)
+                    , inject = '';
+                    if (a.length) {
+                        $(a).each(function(i, item) {
+                            inject += '<span class="'+klass+(i+1)+'" aria-hidden="true">'+item+'</span>'+after;
+                        });
+                        t.attr('aria-label',text)
+                        .empty()
+                        .append(inject)
 
-            var lapseWidth = $('.timelapse').width();
-            var winWidth = $(window).innerWidth();
-            var lapseOffset = (winWidth - lapseWidth)/2;
-            $('.timelapse').css('left',lapseOffset +'px');
+                    }
+                }
 
-            if (winWidth >= 768){
-                $('.brewBackground').height($('#brewHeroCopy').height()+700);
-            }else {
-                $('.brewBackground').height($('#brewHeroCopy').height()+400);
-            }
-        }
 
-        animate();
+                var methods = {
+                    init : function() {
 
-        //////////////////////////////////////////////
-        //  Event Handlers  //////////////////////////
-        //////////////////////////////////////////////
+                        return this.each(function() {
+                            injector($(this), '', 'char', '');
+                        });
 
-        
-        $('#homeVideo').css('opacity',1);
-    });
+                    },
+
+                    words : function() {
+
+                        return this.each(function() {
+                            injector($(this), ' ', 'word', ' ');
+                        });
+
+                    },
+
+                    lines : function() {
+
+                        return this.each(function() {
+                            var r = "eefec303079ad17405c889e092e105b0";
+                            // Because it's hard to split a <br/> tag consistently across browsers,
+                            // (*ahem* IE *ahem*), we replace all <br/> instances with an md5 hash
+                            // (of the word "split").  If you're trying to use this plugin on that
+                            // md5 hash string, it will fail because you're being ridiculous.
+                            injector($(this).children("br").replaceWith(r).end(), r, 'line', '');
+                        });
+
+                    }
+                };
+
+                $.fn.lettering = function( method ) {
+                    // Method calling logic
+                    if ( method && methods[method] ) {
+                        return methods[ method ].apply( this, [].slice.call( arguments, 1 ));
+                    } else if ( method === 'letters' || ! method ) {
+                        return methods.init.apply( this, [].slice.call( arguments, 0 ) ); // always pass an array
+                    }
+                    $.error( 'Method ' +  method + ' does not exist on jQuery.lettering' );
+                    return this;
+                };
+
+                function animate() {
+                    requestAnimFrame(animate);
+                    draw();
+                }
+
+                function draw() {
+                    $("#beerListing .beer-availability-text").lettering();
+                };
+
+                animate();
+            });
+        }(window.jQuery, window, document));
     </script>
 </body>
 </html>
