@@ -91,8 +91,14 @@ $colour-dark-grey: #313131;
     position: absolute;
     width: 100%;
     z-index: 0;
-    @media screen and (max-width: 768px) {
+    &.beer-bknd-balls-falls {
+        background-size: 100% 100%;
+    }
+    @media screen and (max-width: 991px) {
         background-image: url("/_assets/images/bknd-paper-clean.png");
+        &.beer-bknd-balls-falls {
+            background-size: contain;
+        }
     }
 }
 
@@ -114,6 +120,7 @@ $colour-dark-grey: #313131;
 
     .beer-display-stats {
         color: $colour-dark-grey;
+        margin-bottom: 45px;
         margin-top: 105px;
 
         strong {
@@ -121,9 +128,12 @@ $colour-dark-grey: #313131;
             max-width: 200px;
         }
         .beer-stats-row {
-            position: absolute;
-            right: 0px;
             width: 100%;
+        }
+
+        @media screen and (max-width: 991px) {
+            margin: 105px auto 45px auto;
+            max-width: 90%;
         }
     }
 }
