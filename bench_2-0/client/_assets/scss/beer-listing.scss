@@ -4,28 +4,57 @@
  * Circular CSS Trick from https://css-tricks.com/set-text-on-a-circle/
  */
 
+// Colours
 $colour-dark-grey: #313131;
+
+// Common element sizes
+$beer-badge-width: 262px;
+$beer-badge-inner-width: 190px;
 
 #beerListing {
 
+  .beer-listing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   .beer-listing-item {
     background: $colour-dark-grey;
+    border-radius: ($beer-badge-width / 2);
+    height: $beer-badge-width;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    width: $beer-badge-width;
+
+    a {
+      background: white;
+      border-radius: ($beer-badge-inner-width / 2);
+      display: block;
+      height: $beer-badge-inner-width;
+      left: 35px;
+      position: absolute;
+      top: 35px;
+      width: $beer-badge-inner-width;
+    }
   }
 
   .beer-availability-text {
-    position: relative;
-    width: 400px;
-    border-radius: 50%;
-    transform: rotate(-50deg);
+    height: 60%;
+    left: 26%;
+    position: absolute;
+    top: 34%;
+    transform: rotate(242deg) scaleY(-1);
   }
 
   .beer-availability-text span {
-    height: 200px;
+    color: red;
+    height: ($beer-badge-width / 2);
+    padding-top: 113px;
     position: absolute;
-    width: 20px;
-    left: 0;
-    top: 0;
-    transform-origin: bottom center;
+    transform-origin: top;
+    width: 2em;
   }
 
   .char1 {
