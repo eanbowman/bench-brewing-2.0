@@ -49,7 +49,7 @@ $colour-dark-grey: #313131;
 #beerHeroCopy {
     position: relative;
 
-    .beer-hero-copy {
+    .beer-heroCopy {
         h1, p {
             color: white;
         }
@@ -95,9 +95,21 @@ $colour-dark-grey: #313131;
 
     .beer-display-stats {
         color: $colour-dark-grey;
+        min-height: 500px;
         margin-top: 105px;
         position: absolute;
         right: 0px;
         width: 50%;
+
+        .beer-stats-row {
+            position: absolute;
+            right: 0px;
+            width: 100%;
+        }
+    }
+}
+#find-a-pint {
+    &.balls-falls {
+        margin-top: 0px;
     }
 }

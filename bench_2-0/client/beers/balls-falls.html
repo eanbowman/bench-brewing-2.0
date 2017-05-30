@@ -192,12 +192,12 @@
             </div>
 
             <section id="beerDisplay" class="balls-falls">
-                <img class="slide-up ani_5" src="/_assets/images/beers/balls-falls.png" alt="Ball's Falls IPA" />
+                <img class="ani_3 slide-up" data-slide-up="true" src="/_assets/images/beers/balls-falls.png" alt="Ball's Falls IPA" />
                 <a href="cellar-garde.html" class="beerPreviousArrow"></a>
                 <a href="twenty-mile.html" class="beerNextArrow"></a>
 
                 <div class="beer-display-stats">
-                    <div class="row  slide-left">
+                    <div class="row beer-stats-row ani_5 slide-left" data-slide-left="true">
                         <div class="col-lg-6 col-sm-12">
                             <p><strong>4.5% abv</strong></p>
                             <p><strong>IBU 30</strong></p>
@@ -228,7 +228,7 @@
     </div>
 
     <!-- Find a Pint Section -->
-    <div id="find-a-pint">
+    <div id="find-a-pint" class="balls-falls">
         <div class="find-a-pint-copy">
             <h1>FIND A PINT</h1>
             <p>Bench beer is popping up in new bars and restaurants every week. Explore the map to see where you can grab a pint of the beer from wine country.</p>
@@ -266,6 +266,8 @@
 
                 
                 function draw() {
+                    // Set offsets and Target for animation and Parallax
+                    var paraPos = ($(window).scrollTop()/15);
                     
                 };
 
