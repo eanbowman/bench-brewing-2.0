@@ -55,7 +55,6 @@
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDqWMkztaZRkRI6yZOxFurHqKxboHrqr5U"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 </head>
 
 <body id="our-beer-page">
@@ -253,7 +252,7 @@
             <h1>FIND A PINT</h1>
             <p>Bench beer is popping up in new bars and restaurants every week. Explore the map to see where you can grab a pint of the beer from wine country.</p>
         </div>
-        <div id="google-maps-pints"></div>
+        <div id="google-maps-pints"><iframe src="map/index.html" width="100%" height="410"></iframe></div>
     </div>
     
     <!-- Footer section -->
@@ -305,132 +304,7 @@
                     debounce = setTimeout( function() { onResize(); }, 50 );
                 });
 
-                var image = "iconf.png";
-
-                var locations = [
-                  ['<h2>Against the Grain Urban Tavern</h2>'+'<p>25 Dockside Dr, Toronto, ON M5A 0B5</p>', 43.643401, -79.365680, 1],
-                  ['<h2>Another Bar Toronto</h2>'+'<p>926 Bloor St West, Toronto, ON M6H 1L4</p>', 43.661939, -79.427315, 2],
-                  ['<h2>Bar Fancy</h2>'+'<p>1070 Queen St W, Toronto, ON M6J 1H8</p>', -34.028249, 151.157507, 3],
-                  ['<h2>Bar Hop King St. W</h2>'+'<p>391 King St W, Toronto, ON M5V 1K1</p>', -33.80010128657071, 151.28747820854187, 4],
-                  ['<h2>Bar Hop Brewco</h2>'+'<p>137 Peter St, Toronto, ON M5V 2H3</p>', 43.649157, -79.393201, 5],
-                  ['<h2>Bar Volo</h2>'+'<p>612 College St, Toronto, ON M6G 1B4</p>', 43.656968, -79.414655, 6],
-                  ['<h2>Beer Bistro</h2>'+'<p>18 King St E, Toronto, ON M5C 1C4</p>', 43.649651, -79.377138, 7],
-                  ['<h2>Big Crow</h2>'+'<p>176 Dupont St, Toronto, ON M5R 2E6</p>', 43.675947, -79.403686, 8],
-                  ['<h2>Birreria Volo</h2>'+'<p>612 College St, Toronto, ON M6G 1B4</p>', 43.655425, -79.414575, 9],
-                ];
                 
-                /*JSON*/
-                /*
-                
-                {
-                    "name": "Against the Grain Urban Tavern",
-                    "address": "25 Dockside Dr, Toronto, ON M5A 0B5",
-                    "lat": 43.643401,
-                    "lng": -79.365680,
-                    "id": 1
-                    
-                    },
-                
-                {
-                    "name": "Another Bar Toronto",
-                    "address": "926 Bloor St West, Toronto, ON M6H 1L4",
-                    "lat": 43.661939,
-                    "lng": -79.427315,
-                    "id": 2
-                    
-                    },
-                    
-                {
-                    "name": "Bar Fancy",
-                    "address": "1070 Queen St W, Toronto, ON M6J 1H8",
-                    "lat": -34.028249,
-                    "lng": 151.157507,
-                    "id": 3
-                    
-                    },
-                    
-                {
-                    "name": "Bar Hop King St. W",
-                    "address": "391 King St W, Toronto, ON M5V 1K1",
-                    "lat": -33.80010128657071,
-                    "lng": 151.28747820854187,
-                    "id": 4
-                    
-                    },
-                    
-                {
-                    "name": "Bar Hop Brewco",
-                    "address": "137 Peter St, Toronto, ON M5V 2H3",
-                    "lat": 43.649157,
-                    "lng": -79.393201,
-                    "id": 5
-                    
-                    },
-                    
-                {
-                    "name": "Bar Volo",
-                    "address": "612 College St, Toronto, ON M6G 1B4",
-                    "lat": 43.656968,
-                    "lng": -79.414655,
-                    "id": 6
-                    
-                    },
-                
-                {
-                    "name": "Beer Bistro",
-                    "address": "18 King St E, Toronto, ON M5C 1C4",
-                    "lat": 43.649651,
-                    "lng": -79.377138,
-                    "id": 7
-                    
-                    },
-                    
-                {
-                    "name": "Big Crow",
-                    "address": "176 Dupont St, Toronto, ON M5R 2E6",
-                    "lat": 43.675947,
-                    "lng": -79.403686,
-                    "id": 8
-                    
-                    },
-                
-                {
-                    "name": "Birreria Volo",
-                    "address": "612 College St, Toronto, ON M6G 1B4",
-                    "lat": 43.643401,
-                    "lng": -79.414575,
-                    "id": 9
-                    
-                    }
-                */
-
-                var map = new google.maps.Map(document.getElementById('google-maps-pints'), {
-                  zoom: 12,
-                  center: new google.maps.LatLng(43.643372, -79.389546),
-                    
-                  styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#C6DCC8"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#222823"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#C6DCC8"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#222823"},{"lightness":40}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#222823"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#C6DCC8"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#222823"},{"lightness":4}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#C6DCC8"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}],
-                
-                  mapTypeId: google.maps.MapTypeId.ROADMAP
-                });
-
-                var infowindow = new google.maps.InfoWindow();
-
-                var marker, i;
-
-                for (i = 0; i < locations.length; i++) { 
-                  marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                    icon:image,
-                    map: map
-                  });
-
-                  google.maps.event.addListener(marker, 'click', (function(marker, i) {
-                    return function() {
-                      infowindow.setContent(locations[i][0]);
-                      infowindow.open(map, marker);
-                    }
-                  })(marker, i));
-                }
             });
         }(window.jQuery, window, document));
     </script>
