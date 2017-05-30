@@ -3,28 +3,101 @@
  * For the individual beer display pages
  */
 
+// Colours
+$colour-dark-grey: #313131;
+
 @keyframes slideup {
-    from {top: 100%;}
-    to {top: 0%;}
+    0% {bottom: -100%;opacity: 0;}
+    100% {bottom: 0%;opacity: 1;}
 }
 
 .slide-up {
-	animation: slideup 5s once;
+    -webkit-animation: slideup 3s;
+    animation: slideup 3s;
+}
+
+@keyframes slideleft {
+    0% {right: -100%;opacity: 0;}
+    100% {right: 0%;opacity: 1;}
+}
+.slide-left {
+    -webkit-animation: slideleft 5s;
+    animation: slideleft 5s;
+}
+
+.beer-display-header {
+    min-height: 350px;
+    position: relative;
+    width: 100%;
+}
+.hero-background {
+    background-position:  0px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    left: 0px;
+    max-height: 100%;
+    min-height: 420px;
+    position: absolute;
+    top: -125px;
+    width: 100%;
+    z-index: 0;
+}
+.hero-balls-falls-background {
+    background-image: url("/_assets/images/beers/bknd-head-balls-falls.jpg");
+}
+#beerHeroCopy {
+    position: relative;
+
+    .beer-hero-copy {
+        h1, p {
+            color: white;
+        }
+    }
+}
+
+#our-beer-display .container-fluid {
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
 }
 
 .beerDisplayBackground {
-	background-image: url("/_assets/images/bknd-paper-clean.png");
-	background-size: cover;
-	background-position: bottom left;
-	position: absolute;
-	width: 100%;
-	z-index: 0;
+    background-image: url("/_assets/images/bknd-paper-clean.png");
+    background-size: cover;
+    background-position: bottom left;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
 }
 
-.beerDisplay {
-	width: 100%;
+#beerDisplay {
+    height: 1000px;
+    overflow: hidden;
+    padding-top: 75px;
+    position: relative;
+    width: 100%;
+
+    img {
+        bottom: 0px;
+        position: absolute;
+    }
 }
 
 .balls-falls {
 
+}
+
+#our-beer-container.beer-display {
+    overflow: hidden;
+    position: relative;
+
+    .beer-display-stats {
+        color: $colour-dark-grey;
+        margin-top: 105px;
+        position: absolute;
+        right: 0px;
+        width: 50%;
+    }
 }

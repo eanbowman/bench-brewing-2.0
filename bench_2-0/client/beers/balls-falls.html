@@ -57,7 +57,7 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 </head>
 
-<body id="our-beer-page">
+<body id="our-beer-display">
     <!-- Google Tag Manager -->
     <noscript>
         <iframe src="//www.googletagmanager.com/ns.html?id=GTM-K69K3J" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -175,22 +175,53 @@
         </div>
     </div>
     <!-- Parralax Background should stay out of bottstrap container -->
-    <div id="our-beer-container" class="container-fluid">
+    <div id="our-beer-container" class="beer-display container-fluid">
 
         <div class="js-beer-content">
             <!-- Beer Section Hero Copy -->
-            <div id="beerHeroCopy" class="row ani_5">
-                <div class="col-sm-12 col-xs-12 beer-heroCopy ani_5 active">
-                    <a href="../our-beer.html">&lsaquo; BACK</a>
-                    <h1>BALL’S FALLS SESSION IPA</h1>
-                    <p>Named after the historic waterfall located in the Twenty Valley, our Session IPA has a juicy hop aroma of peaches and citrus. It’s highly sessionable with a low bitterness, and finishes dry with a hint of cedar.</p>
+            <div class="beer-display-header">
+                <div class="hero-background hero-balls-falls-background"></div>
+                    
+                <div id="beerHeroCopy" class="row">
+                    <div class="col-sm-12 col-xs-12 beer-heroCopy ani_5 active">
+                        <a href="../our-beer.html">&lsaquo; BACK</a>
+                        <h1>BALL’S FALLS SESSION IPA</h1>
+                        <p>Named after the historic waterfall located in the Twenty Valley, our Session IPA has a juicy hop aroma of peaches and citrus. It’s highly sessionable with a low bitterness, and finishes dry with a hint of cedar.</p>
+                    </div>
                 </div>
             </div>
 
-            <section id="beerDisplay balls-falls">
-                <img class="beer-slide-up ani_5" src="/_assets/images/beers/balls-falls.png" alt="Ball's Falls IPA" />
+            <section id="beerDisplay" class="balls-falls">
+                <img class="slide-up ani_5" src="/_assets/images/beers/balls-falls.png" alt="Ball's Falls IPA" />
                 <a href="cellar-garde.html" class="beerPreviousArrow"></a>
                 <a href="twenty-mile.html" class="beerNextArrow"></a>
+
+                <div class="beer-display-stats">
+                    <div class="row  slide-left">
+                        <div class="col-lg-6 col-sm-12">
+                            <p><strong>4.5% abv</strong></p>
+                            <p><strong>IBU 30</strong></p>
+                            <p><strong>Yeast:</strong><br>
+                            Vermont Ale</p>
+                            <p><strong>Kettle Hops:</strong><br>
+                            Simcoe &amp; Mosaic</p>
+                            <p><strong>Dry Hops:</strong><br>
+                            Simcoe &amp; Mosaic</p>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <p><strong>Malts:</strong><br>
+                            Golden Promise<br>
+                            Carafoam<br>
+                            Wheat</p>
+                            <br>
+                            <br>
+                            <p><strong>Suggested Food Pairings:</strong><br>
+                            Pizza Margherita<br>
+                            Buffalo Wings<br>
+                            Steak Salad</p>
+                        </div>
+                    </div>
+                </div>
             </section>
             
         </div>
@@ -242,7 +273,7 @@
 
                 function onResize() {
                     var beerContentHeight = $('.js-beer-content').height();
-                    beerContentHeight += 300;
+                    beerContentHeight += 125;
                     $('.js-beer-background').height(beerContentHeight);
                 }
                 onResize();
