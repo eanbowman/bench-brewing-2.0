@@ -101,10 +101,6 @@ $colour-dark-grey: #313131;
     }
 }
 
-.balls-falls {
-
-}
-
 #our-beer-container.beer-display {
     overflow: hidden;
     position: relative;
@@ -117,6 +113,10 @@ $colour-dark-grey: #313131;
         right: 0px;
         width: 50%;
 
+        strong {
+            display: block;
+            max-width: 200px;
+        }
         .beer-stats-row {
             position: absolute;
             right: 0px;
@@ -128,4 +128,20 @@ $colour-dark-grey: #313131;
     &.balls-falls {
         margin-top: 0px;
     }
+}
+.beerPreviousArrow {
+    background: url("/_assets/images/beers/arrow-left.png") 0px 0px no-repeat;
+    height: 32px;
+    left: 220px;
+    position: absolute;
+    top: 450px;
+    width: 32px;
+}
+.beerNextArrow {
+    background: url("/_assets/images/beers/arrow-right.png") 0px 0px no-repeat;
+    height: 32px;
+    left: 650px;
+    position: absolute;
+    top: 450px;
+    width: 32px;
 }
