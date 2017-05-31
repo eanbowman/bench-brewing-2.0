@@ -198,29 +198,29 @@
                     <div class="row beer-stats-row ani_5" data-slide-left="true">
                         <div class="col-sm-6 col-xs-6">
                             <div class="copy">
-                                <p><strong>4.5% abv</strong></p>
+                                <p class="beerStat"><strong>4.5% abv</strong></p>
                                 <br>
-                                <p><strong>IBU 30</strong></p>
+                                <p class="beerStat"><strong>IBU 30</strong></p>
                                 <br>
-                                <p><strong>Yeast:</strong>
+                                <p class="beerStat"><strong>Yeast:</strong>
                                 Vermont Ale</p>
                                 <br>
-                                <p><strong>Kettle Hops:</strong>
+                                <p class="beerStat"><strong>Kettle Hops:</strong>
                                 Simcoe &amp; Mosaic</p>
                                 <br>
-                                <p><strong>Dry Hops:</strong>
+                                <p class="beerStat"><strong>Dry Hops:</strong>
                                 Simcoe &amp; Mosaic</p>
                             </div>
                         </div>
                         <div class="col-sm-6 col-xs-6">
                             <div class="copy">
-                                <p><strong>Malts:</strong>
+                                <p class="beerStat"><strong>Malts:</strong>
                                 Golden Promise<br>
                                 Carafoam<br>
                                 Wheat</p>
                                 <br>
                                 <br>
-                                <p><strong>Suggested Food Pairings:</strong>
+                                <p class="beerStat"><strong>Suggested Food Pairings:</strong>
                                 Pizza Margherita<br>
                                 Buffalo Wings<br>
                                 Steak Salad</p>
@@ -273,8 +273,21 @@
                 
                 function draw() {
                     // Set offsets and Target for animation and Parallax
-                    var paraPos = ($(window).scrollTop()/15);
-                    
+                    var paraPos = ($(window).scrollTop()/5);
+
+                    var prodOffest = $('.beerDisplayCan').offset().top -500;
+                    var prodDifference = $(window).scrollTop() - prodOffest;
+                    //
+                    var statsOffest = $('.beerStat').offset().top -500;
+                    var statsDifference = $(window).scrollTop() - statsOffest;
+                    //beerDisplayCan //beerStat
+                    $('.beerDisplayCan').css('opacity', (prodDifference/4)/100);
+                    $('.beerStat').css('opacity', (statsDifference/4)/100);
+                    if(($(window).innerWidth()) <= 768){
+                        $('#find-a-pint').css('top', -(paraPos-275)+'px');
+                    } else{
+                        $('#find-a-pint').css('top', -(paraPos-200)+'px');
+                    }
                 };
 
                 animate();
