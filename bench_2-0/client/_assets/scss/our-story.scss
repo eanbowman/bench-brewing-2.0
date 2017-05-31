@@ -76,13 +76,14 @@ $colour-dark-grey: #313131;
             width: 80%;
         }
         .crafting-great-beer {
+            font-size: 36px;
             margin: 0px auto;
-            width: 75%;
+            width: 80%;
         }
         .body {
             font-size: 18px;
             margin: 15px auto;
-            width: 75%;
+            width: 80%;
         }
     }
     .watch-chapter-1-btn {
@@ -92,7 +93,15 @@ $colour-dark-grey: #313131;
         display: inline-block;
         font-size: 18px;
         font-weight: bold;
-        margin: 15px 12%;
+        margin: 15px 10%;
         padding: 5px 10px;
     }
+}
+
+#our-story-videos {
+    background: url("/_assets/images/bknd-ourstory-videos.jpg") 0px 0px no-repeat; /* To be replaced by Vimeo loop */
+    background-size: 100% 100%;
+    height: 769px;
+    margin-top: -60px;
+    width: 100%;
 }
