@@ -130,10 +130,21 @@ $colour-dark-grey: #313131;
         .beer-stats-row {
             width: 100%;
 
-            @media screen and (max-width: 768px) {
-                p {
-                    font-size: 18px;
-                }
+            .copy {
+                    p{
+                        font-size:24px;
+                        @media screen and (max-width: 768px) {
+                            font-size: 18px;
+                        }
+                        @media screen and (max-width: 560px) {
+                            font-size: 16px;
+                        }
+                       
+                    }
+                     @media screen and (max-width: 1024px) {
+                         padding-left: 25%;
+                    }
+                
             }
         }
 
