@@ -283,7 +283,7 @@
     </div>
     
     <!-- Footer section -->
-    <div id="Footer" class="row ani_5">
+    <div id="Footer" class="row ani_5 footer-beerSection">
             <div class="col-sm-1 col-xs-1"></div>
             <div class="col-sm-10 col-xs-10">
                 <div class="footer-line footer-address ani_5">3991 King Street, Beamsville ON, L0R 1B1<br />
@@ -344,7 +344,13 @@
             var cellarOffeset = $('.beer-cellar-garde').offset().top -500;
             var cellarDifference = $(window).scrollTop() - cellarOffeset;
             //
-            var findOffeset = $('#find-a-pint').offset().top -800;
+
+            //
+            var findOffestCorrection = -800;
+
+            console.log(findOffestCorrection);
+
+            var findOffeset = $('#find-a-pint').offset().top + findOffestCorrection;
             var findDifference = $(window).scrollTop() - findOffeset;
             //
             //Set Limits on Animation so there is no over lap or over growth of animation.
@@ -363,7 +369,12 @@
             $('.beer-stone-road').css('opacity', (stoneDifference/4)/100);
             $('.beer-cellar-garde').css('opacity', (cellarDifference/4)/100);
             $('#find-a-pint').css('opacity', (findDifference/4)/100);
-            $('#find-a-pint').css('top', -(paraPos-200)+'px');
+            if(($(window).innerWidth()) <= 768){
+                $('#find-a-pint').css('top', -(paraPos-400)+'px');
+            } else{
+                $('#find-a-pint').css('top', -(paraPos-200)+'px');
+            }
+            
             //
             //$('.brewBackground').css('top',-paraPos+'px');
             //$('#homeShopTeaser').css('background-position-y', (shopParaPos)+'px');
