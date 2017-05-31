@@ -122,9 +122,11 @@ $width-large-column: 970px;
 
 #find-a-pint {
   background-color: $colour-dark-grey;
+  margin: auto;
   margin-top: 80px;
   padding: 50px 0px 70px 0px;
   position: relative;
+  width: 80%;
   z-index: 1;
 
   .find-a-pint-copy {
