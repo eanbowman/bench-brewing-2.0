@@ -309,10 +309,10 @@
                         </div>
                     </div>
                   </div>
-                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <a class="carousel-control-prev" role="button" data-slide="prev">
                     <img src="/_assets/images/chevron-left-large.png" alt="previous">
                   </a>
-                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <a class="carousel-control-next" role="button" data-slide="next">
                     <img src="/_assets/images/chevron-right-large.png" alt="next">
                   </a>
                 </div>
@@ -382,10 +382,62 @@
                 var carouselContainer = $("#carouselOurStoryVideos");
                 var carouselControlPrev = $(".carousel-control-prev");
                 var carouselControlNext = $(".carousel-control-next");
-
-                /* Set Carousel at start position (firse element centered) */
+                var carouselItemWidth = parseInt(366 + 44); // inner width + left & right margins
                 var carouselInner = $(".carousel-inner");
-                carouselInner.css({"left":(carouselContainer.width() / 2 - carouselInner.width() / 2)});
+                var carouselItem = $(".carousel-item");
+                var numCarouselItems = carouselItem.length;
+
+                /* Set carousel inner width to fit items */
+                carouselInner.width(carouselItemWidth*numCarouselItems);
+                
+                /* Set Carousel at start position (first element centered) */
+                var innerOffset = (carouselContainer.width() / 2) - (carouselItem.width() / 2);
+                carouselInner.css({"left":innerOffset+"px"});
+
+                /* Copy the carousel inner element and use it to make the wrap-around effect */
+                var carouselClone = carouselInner.clone();
+                carouselClone.css({"left":(-carouselInner.width() + 510)+"px"});
+                carouselClone.removeClass("carousel-inner").addClass("carousel-clone");
+                carouselContainer.append(carouselClone);
+
+                /* Click events for Left / Right arrows */
+                carouselControlPrev.on("click", function() {
+                    moveCarouselLeft();
+                });
+                carouselControlNext.on("click", function() {
+                    moveCarouselRight();
+                });
+
+                function moveCarouselLeft() {
+                    // move items left
+                    var innerLeftOffset = parseInt(carouselInner.css("left"));
+                    var cloneLeftOffset = parseInt(carouselClone.css("left"));
+                    innerLeftOffset -= carouselItemWidth;
+                    cloneLeftOffset -= carouselItemWidth;
+                    carouselInner.css({"left": innerLeftOffset + "px"});
+                    carouselClone.css({"left": cloneLeftOffset + "px"});
+                    // switch which item is marked active
+                    var activeCarousel = $(".carousel-item.active");
+                    activeCarousel.removeClass("active").next().addClass("active");
+
+                }
+
+                function moveCarouselRight() {
+                    var innerLeftOffset = parseInt(carouselInner.css("left"));
+                    var cloneLeftOffset = parseInt(carouselClone.css("left"));
+                    console.log("Before");
+                    console.log("Inner left: " + innerLeftOffset + " Clone left: " + cloneLeftOffset);
+                    console.log("Move right by " + carouselItemWidth);
+                    innerLeftOffset += carouselItemWidth;
+                    cloneLeftOffset += carouselItemWidth;
+                    console.log("Inner left: " + innerLeftOffset + " Clone left: " + cloneLeftOffset);
+                    carouselInner.css({"left": innerLeftOffset + "px"});
+                    carouselClone.css({"left": cloneLeftOffset + "px"});
+                    // switch which item is marked active
+                    // switch which item is marked active
+                    var activeCarousel = $(".carousel-item.active");
+                    activeCarousel.removeClass("active").prev().addClass("active");
+                }
             });
         }(window.jQuery, window, document));
     </script>
