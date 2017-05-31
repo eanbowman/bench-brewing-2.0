@@ -101,9 +101,15 @@ $colour-dark-grey: #313131;
     }
 }
 
+.videosBackground {
+    height: 769px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 0;
+}
 #our-story-videos {
-    background: url("/_assets/images/bknd-ourstory-videos.jpg") 0px 0px no-repeat; /* To be replaced by Vimeo loop */
-    background-size: 100% 100%;
     height: 769px;
     margin-bottom: -14px;
     margin-top: -60px;
@@ -111,14 +117,6 @@ $colour-dark-grey: #313131;
     position: relative;
     width: 100%;
 
-    .video-loop {
-        height: 769px;
-        left: 0px;
-        position: absolute;
-        top: 0px;
-        width: 100%;
-        z-index: 0;
-    }
     .video-loop-overlay {
         background: rgba(0,0,0,.3);
         content: ' ';
