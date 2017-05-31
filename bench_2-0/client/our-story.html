@@ -200,17 +200,57 @@
     <!-- Videos -->
     <div id="our-story-videos">
         <iframe class="video-loop" src="https://player.vimeo.com/video/219213692?color=763d1c&title=0&byline=0&portrait=0&autoplay=1" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <div class="video-loop-overlay"></div>
         <div class="our-story-videos-content">
             <h1>THE BENCH STORY</h1>
 
             <div class="our-story-videos-carousel">
-                <div class="video-container">
-                    <div class="video-container-video">
+                <div id="carouselOurStoryVideos" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="video-container">
+                            <div class="video-container-video">
+                            </div>
+                            <div class="video-description">
+                                <h1>CHAPTER 1</h1>
+                                <p>The beginning of Bench</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="video-description">
-                        <h1>CHAPTER 1</h1>
-                        <p>The beginning of Bench</p>
+                    <div class="carousel-item">
+                        <div class="video-container">
+                            <div class="video-container-video">
+                            </div>
+                            <div class="video-description">
+                                <h1>CHAPTER 2</h1>
+                                <p>The beginning of Bench</p>
+                            </div>
+                        </div>
                     </div>
+                    <div class="carousel-item">
+                        <div class="video-container">
+                            <div class="video-container-video">
+                            </div>
+                            <div class="video-description">
+                                <h1>CHAPTER 3</h1>
+                                <p>The beginning of Bench</p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
                 </div>
             </div>
         </div>
@@ -235,7 +275,6 @@
     </div>
 
 <!-- Page Specific Javascript -->
-
     <script type="text/javascript">
         (function($, window, document) {
             $(function() {
@@ -264,7 +303,6 @@
                     }
                     debounce = setTimeout( function() { onResize(); }, 50 );
                 });
-
                 
             });
         }(window.jQuery, window, document));
