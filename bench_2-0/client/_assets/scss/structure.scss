@@ -198,6 +198,26 @@ img {
     padding: 0;
     font-size: 13px;
     z-index: 1003;
+
+    /* unvisited link */
+        a:link {
+            color: white;
+        }
+
+        /* visited link */
+        a:visited {
+            color: white;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: white;
+        }
+
+        /* selected link */
+        a:active {
+            color: white;
+        }
     @media only screen and (max-width: 1080px){
             font-size: 10px;
     }
