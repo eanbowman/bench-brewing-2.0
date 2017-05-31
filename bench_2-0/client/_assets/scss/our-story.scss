@@ -106,4 +106,36 @@ $colour-dark-grey: #313131;
     margin-top: -60px;
     padding-top: 105px;
     width: 100%;
+
+    .video-container {
+        background: $colour-dark-grey;
+        height: 206px;
+        padding-bottom: 66px;
+        width: 366px;
+
+        .video-container-video {
+            border: 15px solid white;
+            border-bottom: 0px;
+            height: 206px;
+            width: 366px;
+        }
+        .video-description {
+            background: white;
+            color: $colour-dark-grey;
+            padding: 12px 0px;
+
+            h1 {
+                font-size: 23px;
+                line-height: 23px;
+                margin: 0px auto -8px auto;
+                text-transform: uppercase;
+            }
+            p {
+                font-size: 16px;
+                margin: 0px auto;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+    }
 }
