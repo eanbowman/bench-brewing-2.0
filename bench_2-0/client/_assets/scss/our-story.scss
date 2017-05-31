@@ -170,3 +170,53 @@ $colour-dark-grey: #313131;
         }
     }
 }
+#carouselOurStoryVideos {
+    height: 520px;
+
+    .carousel-inner {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 100%;
+        width: auto;
+    }
+
+    .carousel-item {
+        margin: 100px 21px;
+        position: relative;
+        transform: scale(0.8);
+        transition: all 0.4s ease;
+
+        /* Dark cover layer for non-selected vidoes. Does not take click events, so video behind is clickable. */
+        &:before {
+            background: rgba(0,0,0,0.3);
+            content: ' ';
+            height: 278px;
+            left: 0px;
+            pointer-events: none;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+
+    .carousel-item.active {
+        transform: scale(1);
+
+        &:before {
+            display: none;
+        }
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        left: 0px;
+        position: absolute;
+        top: 30%;
+        z-index: 1;
+    }
+    .carousel-control-next {
+        left: initial;
+        right: 0px;
+    }
+}
