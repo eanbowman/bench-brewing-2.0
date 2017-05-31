@@ -381,21 +381,22 @@
                 var carouselContainer = $("#carouselOurStoryVideos");
                 var carouselControlPrev = $(".carousel-control-prev");
                 var carouselControlNext = $(".carousel-control-next");
-                var carouselItemWidth = parseInt(366 + 44); // inner width + left & right margins
                 var carouselInner = $(".carousel-inner");
                 var carouselItem = $(".carousel-item");
+                var carouselItemWidth = parseInt(carouselItem.width() + 44); // inner width + left & right margins
                 var numCarouselItems = carouselItem.length;
+                var carouselItemsWidthTotal = carouselItemWidth * numCarouselItems;
 
                 /* Set carousel inner width to fit items */
                 carouselInner.width(carouselItemWidth*numCarouselItems);
                 
                 /* Set Carousel at start position (first element centered) */
-                var innerOffset = (carouselContainer.width() / 2) - (carouselItem.width() / 2);
+                var innerOffset = carouselItemWidth;
                 carouselInner.css({"left":innerOffset+"px"});
 
                 /* Copy the carousel inner element and use it to make the wrap-around effect */
                 var carouselClone = carouselInner.clone();
-                carouselClone.css({"left":(-carouselInner.width() + 510)+"px"});
+                carouselClone.css({"left":-carouselItemsWidthTotal+carouselItemWidth+"px"});
                 carouselClone.removeClass("carousel-inner").addClass("carousel-clone");
                 carouselContainer.append(carouselClone);
 
@@ -408,34 +409,58 @@
                 });
 
                 function moveCarouselLeft() {
-                    // move items left
                     var innerLeftOffset = parseInt(carouselInner.css("left"));
                     var cloneLeftOffset = parseInt(carouselClone.css("left"));
-                    innerLeftOffset -= carouselItemWidth;
-                    cloneLeftOffset -= carouselItemWidth;
-                    carouselInner.css({"left": innerLeftOffset + "px"});
-                    carouselClone.css({"left": cloneLeftOffset + "px"});
                     // switch which item is marked active
                     var activeCarousel = $(".carousel-item.active");
-                    activeCarousel.removeClass("active").next().addClass("active");
-
+                    console.log(activeCarousel.index());
+                    if( activeCarousel.index() < numCarouselItems - 1 ) {
+                        activeCarousel.removeClass("active").next().addClass("active");
+                        // move items left
+                        innerLeftOffset -= carouselItemWidth;
+                        cloneLeftOffset -= carouselItemWidth;
+                    } else {
+                        activeCarousel.removeClass("active");
+                        var firstItem = carouselItem.get(0);
+                        console.log(firstItem);
+                        $(firstItem).addClass("active");
+                        // move clone so it looks like it's wrapping around
+                        innerLeftOffset = carouselItemWidth;
+                        cloneLeftOffset = -carouselItemsWidthTotal+carouselItemWidth;
+                    }
+                    if( activeCarousel.index() == (numCarouselItems/2)+1 ) {
+                        console.log("move clone to right");
+                        cloneLeftOffset = innerLeftOffset+(carouselItemWidth*numCarouselItems);
+                    }
+                    carouselInner.css({"left": innerLeftOffset + "px"});
+                    carouselClone.css({"left": cloneLeftOffset + "px"});
                 }
 
                 function moveCarouselRight() {
                     var innerLeftOffset = parseInt(carouselInner.css("left"));
                     var cloneLeftOffset = parseInt(carouselClone.css("left"));
-                    console.log("Before");
-                    console.log("Inner left: " + innerLeftOffset + " Clone left: " + cloneLeftOffset);
-                    console.log("Move right by " + carouselItemWidth);
-                    innerLeftOffset += carouselItemWidth;
-                    cloneLeftOffset += carouselItemWidth;
-                    console.log("Inner left: " + innerLeftOffset + " Clone left: " + cloneLeftOffset);
-                    carouselInner.css({"left": innerLeftOffset + "px"});
-                    carouselClone.css({"left": cloneLeftOffset + "px"});
-                    // switch which item is marked active
                     // switch which item is marked active
                     var activeCarousel = $(".carousel-item.active");
-                    activeCarousel.removeClass("active").prev().addClass("active");
+                    console.log(activeCarousel.index());
+                    if( activeCarousel.index() > 0 ) {
+                        activeCarousel.removeClass("active").prev().addClass("active");  
+                        // move items right                    
+                        innerLeftOffset += carouselItemWidth;
+                        cloneLeftOffset += carouselItemWidth;
+                    } else {
+                        activeCarousel.removeClass("active");
+                        var lastItem = carouselItem.get(numCarouselItems-1);
+                        $(lastItem).addClass("active");
+                        // move clone so it looks like it's wrapping around
+                        innerLeftOffset = -carouselItemsWidthTotal + (2*carouselItemWidth);
+                        cloneLeftOffset = carouselItemWidth * 2;
+                    }
+                    if( activeCarousel.index() == (numCarouselItems/2)-1 ) {
+                        console.log("move clone to left");
+                        cloneLeftOffset = (innerLeftOffset-(carouselItemWidth*numCarouselItems));
+                    }
+                    carouselInner.css({"left": innerLeftOffset + "px"});
+                    carouselClone.css({"left": cloneLeftOffset + "px"});
                 }
             });
         }(window.jQuery, window, document));

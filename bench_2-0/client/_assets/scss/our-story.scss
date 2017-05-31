@@ -172,6 +172,8 @@ $colour-dark-grey: #313131;
 }
 #carouselOurStoryVideos {
     height: 520px;
+    overflow: hidden;
+    width: 100%;
 
     .carousel-inner,
     .carousel-clone {
@@ -183,7 +185,7 @@ $colour-dark-grey: #313131;
     }
     .carousel-clone {
         position: absolute;
-        top: 60px;
+        top: 47px;
     }
 
     .carousel-item {
