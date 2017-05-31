@@ -1,0 +1,62 @@
+/* our-story.scss
+ *
+ * Styles for the Our Story page
+ */
+
+$colour-dark-grey: #313131;
+
+.ourstory-background {
+	background: url("/_assets/images/bknd-ourstory-tractor.jpg") bottom center no-repeat;
+	background-size: cover;
+	height: 934px;
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	z-index: 0;
+}
+
+#our-story-header {
+	height: 934px;
+	padding-top: 125px;
+	position: relative;
+
+	.our-story-copy {
+		background: $colour-dark-grey;
+		bottom: 0px;
+		left: 12%;
+		max-width: 78%;
+		padding: 3% 6%;
+		position: absolute;
+		text-align: center;
+
+		h1 {
+			font-size: 36px;
+		}
+		h2 {
+			font-size: 22px;
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+	.our-story-explore-bench-link {
+		background: url("/_assets/images/chevron-down-45px.png") 0px 0px no-repeat;
+		background-size: cover;
+		display: block;
+		height: 46px;
+		margin: 0px auto;
+		width: 45px
+	}
+}
+
+#our-story-vision {
+	background: url("/_assets/images/bknd-ourvision-paper.png") 50% 50% no-repeat;
+	background-size: cover;
+	height: 1000px;
+	margin-top: -60px;
+	pointer-events: none;
+	position: relative;
+	width: 100%;
+	z-index: 100;
+}
