@@ -168,7 +168,7 @@ img {
         height: 1900px;
     }
 }
-
+//////////////////////////////////
 .mattBackground{
     position: absolute;
     top: 0px;
@@ -179,7 +179,7 @@ img {
     background-repeat: no-repeat;
     background-size: auto 130%;
      
-     @media only screen and (max-width: 1700px){
+     @media only screen and (max-width: 2560px){
         background-size: auto 130%;
         background-position: -400px top;
     }
@@ -205,7 +205,346 @@ img {
         height: 900px;
     }
 }
-
+//////////////////////////////////
+.markBackground{
+    position: absolute;
+    top: 0px;
+    height: 1000px;
+    width: 100%;
+    background-image: url('/_assets/images/ourpeople-bknd-mark.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: auto 130%;
+     
+     @media only screen and (max-width: 2560px){
+        background-size: auto 130%;
+        background-position: -200px top;
+    }
+    
+    //
+    @media only screen and (max-width: 1024px){
+        background-size: auto 110%;
+        background-position: -200px top;
+    }
+    @media only screen and (max-width: 768px){
+        background-size: 110%;
+        background-position: 0px 65px;
+    }
+    
+    //
+    @media only screen and (min-width: 1024px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1366px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1650px){
+        height: 900px;
+    }
+}
+//////////////////////////////////
+.joeBackground{
+    position: absolute;
+    top: 0px;
+    height: 1000px;
+    width: 100%;
+    background-image: url('/_assets/images/ourpeople-bknd-joe.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+     
+     @media only screen and (max-width: 2560px){
+        background-size: 140% auto;
+        background-position: -200px top;
+    }
+    
+    //
+    @media only screen and (max-width: 1024px){
+        background-size: auto 100%;
+        background-position: -200px top;
+    }
+    @media only screen and (max-width: 768px){
+        background-size: 110%;
+        background-position: 0px 65px;
+    }
+    
+    //
+    @media only screen and (min-width: 1024px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1366px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1650px){
+        height: 900px;
+    }
+}
+//////////////////////////////////
+.tonyBackground{
+    position: absolute;
+    top: 0px;
+    height: 1000px;
+    width: 100%;
+    background-image: url('/_assets/images/ourpeople-bknd-anthony.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: auto 130%;
+     
+     @media only screen and (max-width: 2560px){
+        background-size: auto 130%;
+        background-position: -400px top;
+    }
+    
+    //
+    @media only screen and (max-width: 1024px){
+        background-size: auto 130%;
+        background-position: -400px top;
+    }
+    @media only screen and (max-width: 768px){
+        background-size: 110%;
+        background-position: 0px 65px;
+    }
+    
+    //
+    @media only screen and (min-width: 1024px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1366px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1650px){
+        height: 900px;
+    }
+}
+//////////////////////////////////
+.kenBackground{
+    position: absolute;
+    top: 0px;
+    height: 1000px;
+    width: 100%;
+    background-image: url('/_assets/images/ourpeople-bknd-ken.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: auto 130%;
+     
+     @media only screen and (max-width: 2560px){
+        background-size: auto 130%;
+        background-position: -400px top;
+    }
+    
+    //
+    @media only screen and (max-width: 1024px){
+        background-size: auto 130%;
+        background-position: -400px top;
+    }
+    @media only screen and (max-width: 768px){
+        background-size: 110%;
+        background-position: 0px 65px;
+    }
+    
+    //
+    @media only screen and (min-width: 1024px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1366px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1650px){
+        height: 900px;
+    }
+}
+//////////////////////////////////
+.vanBackground{
+    position: absolute;
+    top: 0px;
+    height: 1000px;
+    width: 100%;
+    background-image: url('/_assets/images/ourpeople-bknd-vanessa.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: auto 130%;
+     
+     @media only screen and (max-width: 2560px){
+        background-size: auto 140%;
+        background-position: -200px top;
+    }
+    
+    //
+    @media only screen and (max-width: 1024px){
+        background-size: auto 130%;
+        background-position: -400px top;
+    }
+    @media only screen and (max-width: 768px){
+        background-size: 110%;
+        background-position: 0px 65px;
+    }
+    
+    //
+    @media only screen and (min-width: 1024px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1366px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1650px){
+        height: 900px;
+    }
+}
+//////////////////////////////////
+.patBackground{
+    position: absolute;
+    top: 0px;
+    height: 1000px;
+    width: 100%;
+    background-image: url('/_assets/images/ourpeople-bknd-pat.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+     
+     @media only screen and (max-width: 2560px){
+        background-size: 100% auto;
+        background-position: 000px top;
+    }
+    @media only screen and (max-width: 1450px){
+        background-size: auto 110%;
+        background-position: -200px top;
+    }
+    //
+    @media only screen and (max-width: 1024px){
+        background-size: auto 100%;
+        background-position: -200px top;
+    }
+    @media only screen and (max-width: 768px){
+        background-size: 110%;
+        background-position: 0px 65px;
+    }
+    
+    //
+    @media only screen and (min-width: 1024px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1366px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1650px){
+        height: 900px;
+    }
+}
+//////////////////////////////////
+.jamieBackground{
+    position: absolute;
+    top: 0px;
+    height: 1000px;
+    width: 100%;
+    background-image: url('/_assets/images/ourpeople-bknd-jamie.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: auto 130%;
+     
+     @media only screen and (max-width: 2560px){
+        background-size: auto 130%;
+        background-position: -200px -100px;
+    }
+    
+    //
+    @media only screen and (max-width: 1024px){
+        background-size: auto 100%;
+        background-position: -300px top;
+    }
+    @media only screen and (max-width: 768px){
+        background-size: 110%;
+        background-position: 0px 65px;
+    }
+    
+    //
+    @media only screen and (min-width: 1024px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1366px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1650px){
+        height: 900px;
+    }
+}
+//////////////////////////////////
+.deeshBackground{
+    position: absolute;
+    top: 0px;
+    height: 1000px;
+    width: 100%;
+    background-image: url('/_assets/images/ourpeople-bknd-deesh.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: auto 130%;
+     
+     @media only screen and (max-width: 2560px){
+        background-size: auto 130%;
+        background-position: -200px -100px;
+    }
+    
+    //
+    @media only screen and (max-width: 1024px){
+        background-size: auto 110%;
+        background-position: -400px top;
+    }
+    @media only screen and (max-width: 768px){
+        background-size: 110%;
+        background-position: 0px 65px;
+    }
+    
+    //
+    @media only screen and (min-width: 1024px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1366px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1650px){
+        height: 900px;
+    }
+}
+//////////////////////////////////
+.alexBackground{
+    position: absolute;
+    top: 0px;
+    height: 1000px;
+    width: 100%;
+    background-image: url('/_assets/images/ourpeople-bknd-alex.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: auto 130%;
+     
+     @media only screen and (max-width: 2560px){
+        background-size: auto 120%;
+        background-position: 0 -100px;
+    }
+     @media only screen and (max-width: 1600px){
+        background-size: auto 120%;
+        background-position: -200px -100px;
+    }
+    //
+    @media only screen and (max-width: 1024px){
+        background-size: auto 100%;
+        background-position: -200px top;
+    }
+    @media only screen and (max-width: 768px){
+        background-size: 110%;
+        background-position: 0px 65px;
+    }
+    
+    //
+    @media only screen and (min-width: 1024px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1366px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1650px){
+        height: 900px;
+    }
+}
+//////////////////////////////////
 .brewBackground{
     position: absolute;
     top: 0px;
