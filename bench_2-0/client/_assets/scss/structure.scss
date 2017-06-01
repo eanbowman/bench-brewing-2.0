@@ -137,13 +137,72 @@ img {
      
 
     @media only screen and (min-width: 1024px){
-        height: 1400px;
+        height: 1500px;
     }
     @media only screen and (min-width: 1366px){
-        height: 1600px;
+        height: 1700px;
     }
     @media only screen and (min-width: 1650px){
-        height: 1800px;
+        height: 1900px;
+    }
+}
+
+.whoBackground{
+    position: absolute;
+    top: 0px;
+    height: 1600px;
+    width: 100%;
+    background-image: url('/_assets/images/bknd-we.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto 130%;
+     
+
+    @media only screen and (min-width: 1024px){
+        height: 1500px;
+    }
+    @media only screen and (min-width: 1366px){
+        height: 1700px;
+    }
+    @media only screen and (min-width: 1650px){
+        height: 1900px;
+    }
+}
+
+.mattBackground{
+    position: absolute;
+    top: 0px;
+    height: 1000px;
+    width: 100%;
+    background-image: url('/_assets/images/ourpeople-bknd-matt-rev.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: auto 130%;
+     
+     @media only screen and (max-width: 1700px){
+        background-size: auto 130%;
+        background-position: -400px top;
+    }
+    
+    //
+    @media only screen and (max-width: 1024px){
+        background-size: auto 130%;
+        background-position: -400px top;
+    }
+    @media only screen and (max-width: 768px){
+        background-size: 110%;
+        background-position: 0px 65px;
+    }
+    
+    //
+    @media only screen and (min-width: 1024px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1366px){
+        height: 900px;
+    }
+    @media only screen and (min-width: 1650px){
+        height: 900px;
     }
 }
 
@@ -661,8 +720,114 @@ img {
    
 }
 
+/////////////////////////////////// Who we are ////////////////////////////////
+.partnerCirlces{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom:50px;
+}
+
+.hmeCircle{
+    padding-bottom: 10px;
+}
+
+#ourPeople{
+    padding-top: 13%;
+    padding-bottom:13%;
+    position: relative;
+    background-size: cover;
+    background-image: url(/_assets/images/bknd-ourpeople.jpg);
+
+    h4{
+        font-weight: 700;
+        padding-bottom: 25px;
+    }
+
+    .staff-pic{
+        text-align: center;
+    }
+
+     /* unvisited link */
+        a:link {
+            color: white;
+        }
+
+        /* visited link */
+        a:visited {
+            color: white;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: white;
+        }
+
+        /* selected link */
+        a:active {
+            color: white;
+        }
+}
+
+.staffCopy{
+    font-size: 12px;
+}
+
+#staffHeroCopy{
+    padding:0;
+    padding-top:200px;
+    padding-bottom: 100px;
+    position: relative;
+    
+    @media only screen and (max-width: 768px){
+        top: 100px;
+    }
+
+    .brew-heroCopy{
+        background-color: #313131;
+        opacity: 0;
+
+        h1{
+            padding-top:50px;
+        }
+
+        h1, h2, h3 {
+            text-align: right;
+            padding-left: 50px;
+            padding-right: 40px;
+        }
+        p{
+            padding-left: 50px;
+            padding-right: 40px;
+            padding-bottom: 50px;
+        }
+    }
+    .right-line{
+        background-color: white;
+        width: 0;
+    }
+}
+
 // Footer Code
 #Footer{
+    /* unvisited link */
+        a:link {
+            color: white;
+        }
+
+        /* visited link */
+        a:visited {
+            color: white;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: white;
+        }
+
+        /* selected link */
+        a:active {
+            color: white;
+        }
     background-color: #111;
     padding-bottom: 50px;
     padding-top: 50px;
