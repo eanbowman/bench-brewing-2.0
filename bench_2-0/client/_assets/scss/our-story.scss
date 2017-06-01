@@ -16,25 +16,23 @@ $colour-dark-grey: #313131;
     z-index: 0;
 }
 
-#our-story-header {
-    height: 934px;
+#ourStoryCopy {
     padding-top: 125px;
     position: relative;
 
     .our-story-copy {
         background: $colour-dark-grey;
         bottom: 0px;
-        left: 12%;
         max-width: 78%;
         padding: 3% 6%;
-        position: absolute;
         text-align: center;
 
         h1 {
             font-size: 36px;
         }
-        h2 {
+        p.explore-bench {
             font-size: 22px;
+            text-align: center;
         }
         p {
             font-size: 20px;
@@ -54,8 +52,8 @@ $colour-dark-grey: #313131;
     background: url("/_assets/images/bknd-ourvision-paper.png") 50% 50% no-repeat;
     background-size: 100% 100%;
     height: auto;
-    margin-top: -60px;
-    padding: 100px 0px;
+    margin: -7% 0 -7% 0;
+    padding: 10% 0px;
     pointer-events: none;
     position: relative;
     width: 100%;
@@ -63,6 +61,8 @@ $colour-dark-grey: #313131;
 
     @media screen and (max-width: 768px) {
         background-size: cover;
+        margin: -10% 0;
+        padding: 20% 0;
     }
     .our-story-vision-copy {
         background: $colour-dark-grey;
@@ -70,6 +70,11 @@ $colour-dark-grey: #313131;
         padding: 15px 20px;
         pointer-events: all;
 
+        h1 {
+            @media screen and (max-width: 768px) {
+                font-size: 25px
+            }
+        }
         hr {
             border-top: 4px solid #eee;
             left: 0px;
@@ -82,11 +87,17 @@ $colour-dark-grey: #313131;
             font-size: 36px;
             margin: 0px auto;
             width: 80%;
+            @media screen and (max-width: 768px) {
+                font-size: 16px
+            }
         }
         .body {
             font-size: 18px;
             margin: 15px auto;
             width: 80%;
+            @media screen and (max-width: 768px) {
+                font-size: 12px
+            }
         }
     }
     .watch-chapter-1-btn {
@@ -98,6 +109,10 @@ $colour-dark-grey: #313131;
         font-weight: bold;
         margin: 15px 10%;
         padding: 5px 10px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 }
 
@@ -171,9 +186,15 @@ $colour-dark-grey: #313131;
     }
 }
 #carouselOurStoryVideos {
-    height: 520px;
     overflow: hidden;
     width: 100%;
+
+    @media screen and (max-width: 768px) {
+        left: -50%;
+        transform: scale(0.5);
+        position: relative;
+        width: 200%;
+    }
 
     .carousel-inner,
     .carousel-clone {
@@ -181,11 +202,12 @@ $colour-dark-grey: #313131;
         flex-direction: row;
         flex-wrap: nowrap;
         height: 100%;
+        position: relative;
+        top: 0px;
         width: auto;
     }
     .carousel-clone {
         position: absolute;
-        top: 47px;
     }
 
     .carousel-item {
@@ -221,9 +243,18 @@ $colour-dark-grey: #313131;
         position: absolute;
         top: 30%;
         z-index: 1;
+
+        @media screen and (max-width: 768px) {
+            transform: scale(0.5);
+            left: -50px;
+        }
     }
     .carousel-control-next {
         left: initial;
         right: 0px;
+
+        @media screen and (max-width: 768px) {
+            right: -50px;
+        }
     }
 }

@@ -175,19 +175,21 @@
         </div>
     </div>
 
-    <!-- Our Story Header -->
-    <div id="our-story-header" class="container-fluid">
-        <div class="our-story-copy">
+    <!-- Grey square with hero copy -->
+    <div id="ourStoryCopy" class="row ani_5">
+        <div class="col-sm-3 col-xs-1"></div>
+        <div class="col-sm-6 col-xs-10 home-heroCopy ani_5">
             <h1>THE BEER FROM ONTARIO'S WINE COUNTRY.</h1>
             <p>At Bench Brewing, we believe great things come from great places, which is why we’re proud to call Beamsville, Ontario home. Located in the Twenty Valley of the Niagara Escarpment, and surrounded by the province’s best orchards and vineyards, we pride ourselves on our farmhouse-style brewing. Our goal is to handcraft a wide variety of well-balanced and refreshing beers that are inspired by our surrounding region.</p>
-            <h2>EXPLORE BENCH</h2>
+            <p class="explore-bench">EXPLORE BENCH</p>
             <a href="#our-story-vision" class="our-story-explore-bench-link js-explore-bench"></a>
         </div>
+        <div class="col-sm-3 col-xs-1"></div>
     </div>
 
     <!-- Our Vision -->
-    <div id="our-story-vision" class="container-fluid">
-        <div class="our-story-vision-copy col-md-5 col-sm-8 col-xs-10">
+    <div id="our-story-vision" class="row ani_5">
+        <div class="our-story-vision-copy col-sm-8 col-xs-10">
             <h1>OUR VISION</h1>
             <hr class="line" />
             <p class="crafting-great-beer">Crafting great beer in the Niagara Escarpment.</p>
@@ -209,15 +211,6 @@
 
             <div class="our-story-videos-carousel">
                 <div id="carouselOurStoryVideos">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-                  </ol>
                   <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
                         <div class="video-container">
@@ -364,9 +357,9 @@
                 animate();
 
                 function onResize() {
-                    var beerContentHeight = $('.js-beer-content').height();
-                    beerContentHeight += 300;
-                    $('.js-beer-background').height(beerContentHeight);
+                    var beerContentHeight = $('#ourStoryCopy').height();
+                    beerContentHeight += 125; // top margin
+                    $('.js-ourstory-background').height(beerContentHeight);
                 }
                 onResize();
                 var debounce;
@@ -391,12 +384,12 @@
                 carouselInner.width(carouselItemWidth*numCarouselItems);
                 
                 /* Set Carousel at start position (first element centered) */
-                var innerOffset = carouselItemWidth;
+                var innerOffset = (carouselContainer.width()/2)-(carouselItemWidth/2);
                 carouselInner.css({"left":innerOffset+"px"});
 
                 /* Copy the carousel inner element and use it to make the wrap-around effect */
                 var carouselClone = carouselInner.clone();
-                carouselClone.css({"left":-carouselItemsWidthTotal+carouselItemWidth+"px"});
+                carouselClone.css({"left":-carouselItemsWidthTotal+innerOffset+"px"});
                 carouselClone.removeClass("carousel-inner").addClass("carousel-clone");
                 carouselContainer.append(carouselClone);
 
@@ -425,8 +418,8 @@
                         console.log(firstItem);
                         $(firstItem).addClass("active");
                         // move clone so it looks like it's wrapping around
-                        innerLeftOffset = carouselItemWidth;
-                        cloneLeftOffset = -carouselItemsWidthTotal+carouselItemWidth;
+                        innerLeftOffset = innerOffset;
+                        cloneLeftOffset = -carouselItemsWidthTotal+innerOffset;
                     }
                     if( activeCarousel.index() == (numCarouselItems/2)+1 ) {
                         console.log("move clone to right");
@@ -452,8 +445,8 @@
                         var lastItem = carouselItem.get(numCarouselItems-1);
                         $(lastItem).addClass("active");
                         // move clone so it looks like it's wrapping around
-                        innerLeftOffset = -carouselItemsWidthTotal + (2*carouselItemWidth);
-                        cloneLeftOffset = carouselItemWidth * 2;
+                        innerLeftOffset = -carouselItemsWidthTotal + (innerOffset + carouselItemWidth);
+                        cloneLeftOffset = innerOffset + carouselItemWidth;
                     }
                     if( activeCarousel.index() == (numCarouselItems/2)-1 ) {
                         console.log("move clone to left");
