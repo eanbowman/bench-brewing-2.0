@@ -121,8 +121,17 @@ $colour-dark-grey: #313131;
     left: 0px;
     position: absolute;
     top: 0px;
+    overflow: hidden;
     width: 100%;
     z-index: 0;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+
+    .timelapse {
+        margin-top: -20%;
+    }
 }
 #our-story-videos {
     height: 769px;
@@ -131,6 +140,11 @@ $colour-dark-grey: #313131;
     padding-top: 105px;
     position: relative;
     width: 100%;
+
+    @media screen and (max-width: 768px) {
+        background: url("/_assets/images/bknd-ourschool.jpg") 50% 50% no-repeat;
+        background-size: cover;
+    }
 
     .video-loop-overlay {
         background: rgba(0,0,0,.3);
@@ -194,6 +208,13 @@ $colour-dark-grey: #313131;
         transform: scale(0.5);
         position: relative;
         width: 200%;
+
+        iframe {
+            transform: scale(1);
+        }
+        .carousel-clone {
+            top: 0px !important;
+        }
     }
 
     .carousel-inner,
@@ -207,7 +228,13 @@ $colour-dark-grey: #313131;
         width: auto;
     }
     .carousel-clone {
+        display: flex;
         position: absolute;
+        top: 45px;
+
+        .carousel-item {
+            align-self: center;
+        }
     }
 
     .carousel-item {
@@ -257,4 +284,9 @@ $colour-dark-grey: #313131;
             right: -50px;
         }
     }
+}
+
+#our-story-page #Footer {
+    margin: 0px;
+    position: relative;
 }
