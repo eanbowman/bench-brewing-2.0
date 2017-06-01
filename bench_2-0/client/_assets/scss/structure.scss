@@ -168,6 +168,28 @@ img {
         height: 1900px;
     }
 }
+//
+.getBackground{
+    position: absolute;
+    top: 0px;
+    height: 1600px;
+    width: 100%;
+    background-image: url('/_assets/images/get-involved-back.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+     
+
+    @media only screen and (min-width: 1024px){
+        height: 1500px;
+    }
+    @media only screen and (min-width: 1366px){
+        height: 1700px;
+    }
+    @media only screen and (min-width: 1650px){
+        height: 1900px;
+    }
+}
 //////////////////////////////////
 .mattBackground{
     position: absolute;
@@ -965,8 +987,46 @@ img {
         }
     }
 
-}
+}//homeShopTeaser
+#getShopTeaser{
+    margin-top: -50px;
+    z-index: 999;
+    //height:500px;
+    background-image: url('/_assets/images/shopTeaser.jpg');
+    background-size: auto 140%;
+    background-position: left top;
+    background-repeat: no-repeat;
+    @media only screen and (max-width: 768px){
+        // height: 300px;
+    }
 
+    .home-shopCta{
+        padding-top: 200px;
+        padding-bottom: 50px;
+    }
+
+    .home-shopCopy{
+        margin: auto;
+        max-width: 768px;
+        padding:20px;
+        padding-top: 0;
+    }
+
+    .home-shopLearnMore{
+        height: 150px;
+
+        .home-shopLrnImg {
+            width: 100%;
+            left: 0;
+            right:0;
+            width: 30%;
+            margin: auto;
+            position: absolute;
+            max-width: 300px;
+        }
+    }
+
+}
 /////// Our Brewery
 #brewHeroCopy{
     padding:0;
@@ -1144,6 +1204,27 @@ img {
         background-color: white;
         width: 0;
     }
+}
+
+///////////////////////////////////////////////////////////////
+////////////////   Event Styles
+/////////////////////////////////////////////////////////////
+.getHead{
+    padding-top:150px;
+    padding-bottom:100px;
+    color: #313131;
+}
+.eventHolder{
+    padding-top: 0;
+}
+
+.fbPost{
+    padding-bottom:25px;
+    margin: auto;
+}
+.fb-post{
+    margin: auto;
+    display: table !important;
 }
 
 // Footer Code
