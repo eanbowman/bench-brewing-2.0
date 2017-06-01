@@ -368,6 +368,9 @@
                     var beerContentHeight = $('#ourStoryCopy').height();
                     beerContentHeight += 125; // top margin
                     $('.js-ourstory-background').height(beerContentHeight);
+
+                    /* Carousel values will change with screen width */
+                    carouselInit();
                 }
                 onResize();
                 var debounce;
@@ -379,14 +382,25 @@
                 });
 
                 /* Carousel */
-                var carouselContainer = $("#carouselOurStoryVideos");
-                var carouselControlPrev = $(".carousel-control-prev");
-                var carouselControlNext = $(".carousel-control-next");
-                var carouselInner = $(".carousel-inner");
-                var carouselItem = $(".carousel-item");
-                var carouselItemWidth = parseInt(carouselItem.width() + 44); // inner width + left & right margins
-                var numCarouselItems = carouselItem.length;
-                var carouselItemsWidthTotal = carouselItemWidth * numCarouselItems;
+                var carouselContainer;
+                var carouselControlPrev;
+                var carouselControlNext;
+                var carouselInner;
+                var carouselItem;
+                var carouselItemWidth;
+                var numCarouselItems;
+                var carouselItemsWidthTotal;
+                function carouselInit() {
+                    carouselContainer = $("#carouselOurStoryVideos");
+                    carouselControlPrev = $(".carousel-control-prev");
+                    carouselControlNext = $(".carousel-control-next");
+                    carouselInner = $(".carousel-inner");
+                    carouselItem = $(".carousel-item");
+                    carouselItemWidth = parseInt(carouselItem.width() + 44); // inner width + left & right margins
+                    numCarouselItems = carouselItem.length;
+                    carouselItemsWidthTotal = carouselItemWidth * numCarouselItems;
+                }
+                carouselInit();
 
                 /* Set carousel inner width to fit items */
                 carouselInner.width(carouselItemWidth*numCarouselItems);
