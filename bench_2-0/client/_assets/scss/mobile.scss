@@ -83,6 +83,13 @@ a[data-rel=hamburger] {
     a[data-rel=hamburger] {
         display: block;
     }
+    #nav-mobileNavHolder .nav-menuDropDown {
+        top: -1000px;
+
+        &.active {
+            top: 65px;
+        }
+    }
     html,
     body,
     header,
