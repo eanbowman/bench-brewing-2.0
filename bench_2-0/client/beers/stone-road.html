@@ -189,9 +189,10 @@
                 <div class="hero-background hero-stone-background"></div>
                 <a href="../our-beer.html" class="beer-back-btn"><span class="back-arrow">&lsaquo;</span> BACK</a>
                 <div id="beerHeroCopy" class="row">
-                    <div class="col-sm-12 col-xs-12 beer-heroCopy ani_5 active">
+                    <div class="col-sm-12 col-xs-12 beer-heroCopy stone-road ani_5 active">
                         <h1>STONE ROAD WHITE ALE</h1>
-                        <p>Named after the historic waterfall located in the Twenty Valley, our Session IPA has a juicy hop aroma of peaches and citrus. It’s highly sessionable with a low bitterness, and finishes dry with a hint of cedar.</p>
+                        <p>"Located along the Benchlands of the Niagara Escarpment, we at Bench Brewing are passionate about the beer we make and the place we make it. Our White Ale is named after the old Queenston to Grimsby Stone Road that originally brought Loyalist and Mennonite settlers to the Twenty Valley. Today, this historical path is part the Niagara Wine Route known as King Street or Regional Road 81. It is also where we call home.
+With a hazy, white appearance, our Belgian-style wheat beer has aromas of orange peel and spice, and a complex yet balanced finish."</p>
                     </div>
                 </div>
             </div>
@@ -300,6 +301,12 @@
                     } else{
                         $('#find-a-pint').css('top', -(paraPos-200)+'px');
                     }
+
+                    // Position Escarpment Graphic at Scroll-top of Container + Container Height - Escarpment Height
+                    var beerDisplayObj = $("#beerDisplay");
+                    var escarpmentObj = $("#our-beer-container.beer-display .beer-display-escarpment.stone-road");
+                    var escarpmentTopOffset = beerDisplayObj.height() - escarpmentObj.height() + 75;
+                    escarpmentObj.css({"top": escarpmentTopOffset+"px"});
                 };
 
                 animate();

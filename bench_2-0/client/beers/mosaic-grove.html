@@ -308,6 +308,12 @@
                     } else{
                         $('#find-a-pint').css('top', -(paraPos-200)+'px');
                     }
+
+                    // Position Escarpment Graphic at Scroll-top of Container + Container Height - Escarpment Height
+                    var beerDisplayObj = $("#beerDisplay");
+                    var escarpmentObj = $("#our-beer-container.beer-display .beer-display-escarpment.mosaic-grove");
+                    var escarpmentTopOffset = beerDisplayObj.height() - escarpmentObj.height() + 75;
+                    escarpmentObj.css({"top": escarpmentTopOffset+"px"});
                 };
 
                 animate();
