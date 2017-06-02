@@ -207,25 +207,25 @@
                     <div class="row beer-stats-row ani_5" data-slide-left="true">
                         <div class="col-sm-6 col-xs-6">
                             <div class="copy">
-                                <p class="beerStat"><strong>4.5% abv</strong></p>
+                                <p class="beerStat"><strong>6% abv</strong></p>
                                 <br>
-                                <p class="beerStat"><strong>IBU 30</strong></p>
+                                <p class="beerStat"><strong>IBU 14</strong></p>
                                 <br>
                                 <p class="beerStat"><strong>Yeast:</strong>
-                                Vermont Ale</p>
+                                Saison and Brettanomyces Drie</p>
                                 <br>
                                 <p class="beerStat"><strong>Kettle Hops:</strong>
-                                Simcoe &amp; Mosaic</p>
+                                Mosaic</p>
                                 <br>
                                 <p class="beerStat"><strong>Dry Hops:</strong>
-                                Simcoe &amp; Mosaic</p>
+                                Citra</p>
                             </div>
                         </div>
                         <div class="col-sm-6 col-xs-6">
                             <div class="copy">
                                 <p class="beerStat"><strong>Malts:</strong>
-                                Golden Promise<br>
-                                Carafoam<br>
+                                Bohemian Floor Malted Pilsner<br>
+                                Canadian 2-row<br>
                                 Wheat</p>
                                 <br>
                                 <br>
@@ -309,6 +309,12 @@
                     } else{
                         $('#find-a-pint').css('top', -(paraPos-200)+'px');
                     }
+
+                    // Position Escarpment Graphic at Scroll-top of Container + Container Height - Escarpment Height
+                    var beerDisplayObj = $("#beerDisplay");
+                    var escarpmentObj = $("#our-beer-container.beer-display .beer-display-escarpment.citra-grove");
+                    var escarpmentTopOffset = beerDisplayObj.height() - escarpmentObj.height() + 75;
+                    escarpmentObj.css({"top": escarpmentTopOffset+"px"});
                 };
 
                 animate();

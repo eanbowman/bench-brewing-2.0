@@ -40,6 +40,9 @@ $colour-dark-grey: #313131;
         position: absolute;
         top: 100px;
 
+        &:hover {
+            text-decoration: none;
+        }
         .back-arrow {
             font-size: 24px;
             line-height: 18px;
@@ -75,6 +78,9 @@ $colour-dark-grey: #313131;
 }
 .hero-cellar-background {
     background-image: url("/_assets/images/bknd-we.jpg");
+    @media screen and (max-width: 768px) {
+        min-height: 450px;
+    }
 }
 .hero-citra-background {
     background-image: url("/_assets/images/Bench_CitraGrove_BG_Image.jpg");
@@ -84,9 +90,15 @@ $colour-dark-grey: #313131;
 }
 .hero-mosaic-background {
     background-image: url("/_assets/images/bknd-mosaic.jpg");
+    @media screen and (max-width: 768px) {
+        min-height: 550px;
+    }
 }
 .hero-simcoe-background {
     background-image: url("/_assets/images/bknd-simcoe.jpg");
+    @media screen and (max-width: 768px) {
+        min-height: 450px;
+    }
 }
 
 #beerHeroCopy {
@@ -99,7 +111,7 @@ $colour-dark-grey: #313131;
 
         @media only screen and (min-width: 1365px) {
             h1 {
-                font-size: 51px;
+                font-size: 50px;
             }
         }
 
