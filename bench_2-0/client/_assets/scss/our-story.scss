@@ -6,9 +6,9 @@
 $colour-dark-grey: #313131;
 
 .ourstory-background {
-    background: url("/_assets/images/bknd-ourstory-tractor.jpg") bottom center no-repeat;
+    background: url("/_assets/images/bknd-ourstory-tractor.jpg") top center no-repeat;
     background-size: cover;
-    height: 934px;
+    height: 1500px;
     left: 0px;
     position: absolute;
     top: 0px;
@@ -17,7 +17,7 @@ $colour-dark-grey: #313131;
 }
 
 #ourStoryCopy {
-    padding-top: 125px;
+    padding-top: 40%;
     position: relative;
 
     
@@ -118,10 +118,10 @@ $colour-dark-grey: #313131;
 }
 
 .videosBackground {
-    height: 769px;
+    height: 1700px;
     left: 0px;
     position: absolute;
-    top: 0px;
+    top: 0;
     overflow: hidden;
     width: 100%;
     z-index: 0;
@@ -130,15 +130,33 @@ $colour-dark-grey: #313131;
         display: none;
     }
 
-    .timelapse {
-        margin-top: -20%;
+    .timelapse{
+        pointer-events: none;
+        position: absolute;
+        min-width: 2000px;
+        top: 0;
+        left: 0;
+        margin: auto;
+
+        @media only screen and (min-width: 1024px){
+            min-width: 3000px;
+        }
+        @media only screen and (min-width: 1366px){
+            min-width: 3200px;
+        }
+        @media only screen and (min-width: 1800px){
+            min-width: 3500px;
+        }
+        @media only screen and (max-width: 768px){
+            display: none;
+        }
     }
 }
 #our-story-videos {
-    height: 769px;
-    margin-bottom: -14px;
-    margin-top: -60px;
-    padding-top: 105px;
+    //height: 769px;
+    //margin-bottom: -14px;
+    //margin-top: -60px;
+    //padding-top: 105px;
     position: relative;
     width: 100%;
 
@@ -157,27 +175,32 @@ $colour-dark-grey: #313131;
         width: 100%;
     }
     .our-story-videos-content {
-        height: 769px;
+        //height: 769px;
         left: 0px;
         position: relative;
         top: 0px;
         width: 100%;
-
+        padding-top: 100px;
         h1 {
             text-shadow: 2px 2px 2px rgba(0,0,0,.3);
+            padding-bottom: 50px;
         }
     }
     .video-container {
         background: $colour-dark-grey;
-        height: 206px;
-        padding-bottom: 66px;
-        width: 366px;
+        margin: auto;
+        margin-bottom: 25px;
+        max-width: 400px;
+        @media screen and (max-width: 600px) {
+            max-width: 300px;
+        }
+        //width: 366px;
 
         .video-container-video {
             border: 15px solid white;
             border-bottom: 0px;
-            height: 206px;
-            width: 366px;
+            //height: 206px;
+            //width: 366px;
         }
         .video-description {
             background: white;
@@ -205,10 +228,10 @@ $colour-dark-grey: #313131;
     width: 100%;
 
     @media screen and (max-width: 768px) {
-        left: -50%;
-        transform: scale(0.5);
+        //left: -50%;
+        //transform: scale(0.5);
         position: relative;
-        width: 200%;
+        //width: 200%;
 
         iframe {
             transform: scale(1);
@@ -217,7 +240,6 @@ $colour-dark-grey: #313131;
             top: 0px !important;
         }
     }
-
     .carousel-inner,
     .carousel-clone {
         display: flex;
@@ -227,6 +249,7 @@ $colour-dark-grey: #313131;
         position: relative;
         top: 0px;
         width: auto;
+        transition: all 1s;
     }
     .carousel-clone {
         display: flex;
@@ -239,14 +262,11 @@ $colour-dark-grey: #313131;
     }
 
     .carousel-item {
-        margin: 100px 21px;
         position: relative;
-        transform: scale(0.8);
-        transition: all 0.4s ease;
+        cursor: pointer;
 
         /* Dark cover layer for non-selected vidoes. Does not take click events, so video behind is clickable. */
         &:before {
-            background: rgba(0,0,0,0.3);
             content: ' ';
             height: 278px;
             left: 0px;
@@ -273,7 +293,7 @@ $colour-dark-grey: #313131;
         z-index: 1;
 
         @media screen and (max-width: 768px) {
-            transform: scale(0.5);
+            //transform: scale(0.5);
             left: -50px;
         }
     }

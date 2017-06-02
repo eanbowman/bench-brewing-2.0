@@ -67,6 +67,28 @@ $colour-dark-grey: #313131;
 .hero-balls-falls-background {
     background-image: url("/_assets/images/beers/bknd-head-balls-falls.jpg");
 }
+.hero-twenty-background {
+    background-image: url("/_assets/images/bknd-mobile/bknd-ourbeer-slideover-twentymile.jpg");
+}
+.hero-stone-background {
+    background-image: url("/_assets/images/beers/bknd-head-balls-falls.jpg");
+}
+.hero-cellar-background {
+    background-image: url("/_assets/images/bknd-mobile/bknd-head-balls-falls.jpg");
+}
+.hero-citra-background {
+    background-image: url("/_assets/images/Bench_CitraGrove_BG_Image.jpg");
+}
+.hero-clean-background {
+    background-image: url("/_assets/images/Bench_CleanSlate_BG_Image.jpg");
+}
+.hero-mosaic-background {
+    background-image: url("/_assets/images/bknd-mosaic.jpg");
+}
+.hero-simcoe-background {
+    background-image: url("/_assets/images/bknd-simcoe.jpg");
+}
+
 #beerHeroCopy {
     position: relative;
 
@@ -94,6 +116,62 @@ $colour-dark-grey: #313131;
     &.beer-bknd-balls-falls {
         background-size: 100% 100%;
     }
+    @media screen and (max-width: 991px) {
+        background-image: url("/_assets/images/bknd-paper-clean.png");
+        &.beer-bknd-balls-falls {
+            background-size: contain;
+        }
+    }
+}
+
+.twenty-back{
+    background-image: url("/_assets/images/beers/bknd-details-twenty.jpg");
+    @media screen and (max-width: 991px) {
+        background-image: url("/_assets/images/bknd-paper-clean.png");
+        &.beer-bknd-balls-falls {
+            background-size: contain;
+        }
+    }
+}
+
+.cellar-back{
+    background-image: url("/_assets/images/beers/bknd-details-cellar.jpg");
+    @media screen and (max-width: 991px) {
+        background-image: url("/_assets/images/bknd-paper-clean.png");
+        &.beer-bknd-balls-falls {
+            background-size: contain;
+        }
+    }
+}
+.citra-back{
+    background-image: url("/_assets/images/beers/bknd-details-citra.jpg");
+    @media screen and (max-width: 991px) {
+        background-image: url("/_assets/images/bknd-paper-clean.png");
+        &.beer-bknd-balls-falls {
+            background-size: contain;
+        }
+    }
+}
+.mosaic-back{
+    background-image: url("/_assets/images/beers/bknd-details-mosaic.jpg");
+    @media screen and (max-width: 991px) {
+        background-image: url("/_assets/images/bknd-paper-clean.png");
+        &.beer-bknd-balls-falls {
+            background-size: contain;
+        }
+    }
+}
+.simcoe-back{
+    background-image: url("/_assets/images/beers/bknd-details-simcoe.jpg");
+    @media screen and (max-width: 991px) {
+        background-image: url("/_assets/images/bknd-paper-clean.png");
+        &.beer-bknd-balls-falls {
+            background-size: contain;
+        }
+    }
+}
+.stone-back{
+    background-image: url("/_assets/images/beers/bknd-details-stone.jpg");
     @media screen and (max-width: 991px) {
         background-image: url("/_assets/images/bknd-paper-clean.png");
         &.beer-bknd-balls-falls {
