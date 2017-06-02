@@ -1,3 +1,6 @@
 #Ignore dependencies that are auto-installed
 node_modules/
 #*/node_modules/
+#
+bench_2.0/client/_assets/app.css
+
