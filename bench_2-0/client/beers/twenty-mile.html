@@ -196,7 +196,8 @@
                 </div>
             </div>
 
-            <section id="beerDisplay" class="balls-falls">
+            <section id="beerDisplay" class="twenty-mile">
+                <div class="beer-display-escarpment twenty-mile"></div>
                 <div class="beerDisplayCan col-sm-12 col-md-6">
                     <div class="beer-display-can-img"><img class="ani_3" data-slide-up="true" src="/_assets/images/beers/twenty-bottle.png" alt="Ball's Falls IPA" /></div>
                 </div>
@@ -299,6 +300,10 @@
                     } else{
                         $('#find-a-pint').css('top', -(paraPos-200)+'px');
                     }
+
+                    // Set height of esscarpment div to match container div
+                    var beerDisplayHeight = $("#beerDisplay").height();
+                    $(".beer-display-escarpment").height(beerDisplayHeight);
                 };
 
                 animate();

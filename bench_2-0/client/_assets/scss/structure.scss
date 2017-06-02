@@ -581,6 +581,7 @@ img {
     background-size: auto 130%;
     @media only screen and (max-width: 768px){
         background-image: url('/_assets/images/ourBreweryMobileBackground.gif');
+        height: 300px !important;
     }
     
     .timelapse{
@@ -1056,6 +1057,10 @@ img {
         background-color: white;
         width: 0;
     }
+
+    @media screen and (max-width: 768px) {
+        padding: 300px 0 0 0;
+    }
 }
 #brewSketches{
     padding-top: 13%;
@@ -1063,6 +1068,11 @@ img {
     position: relative;
     background-size: cover;
     background-image: url(/_assets/images/bknd-ourvision.png);
+
+    @media screen and (max-width: 768px) {
+        margin-top: -28%;
+        padding-top: 28%;
+    }
 
     h3{
         color: #313131;

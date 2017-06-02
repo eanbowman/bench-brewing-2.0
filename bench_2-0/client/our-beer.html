@@ -317,32 +317,34 @@
                     
             // Set offsets and Target for animation and Parallax
             var paraPos = ($(window).scrollTop()/5);
+            // beer Circle Offset
+            var beerCircleOffset = 700;
             //
-            var beerHeroOffest = $('#beerHeroCopy').offset().top -500;
+            var beerHeroOffest = $('#beerHeroCopy').offset().top - beerCircleOffset;
             var beerDifference = $(window).scrollTop() - ballsOffest;
             //
-            var ballsOffest = $('.beer-balls-falls').offset().top -500;
+            var ballsOffest = $('.beer-balls-falls').offset().top - beerCircleOffset;
             var ballsDifference = $(window).scrollTop() - ballsOffest;
             //
-            var twentyOffest = $('.beer-twenty-mile').offset().top -500;
+            var twentyOffest = $('.beer-twenty-mile').offset().top - beerCircleOffset;
             var twentyDifference = $(window).scrollTop() - twentyOffest;
             //
-            var cleanOffest = $('.beer-clean-slate').offset().top -500;
+            var cleanOffest = $('.beer-clean-slate').offset().top - beerCircleOffset;
             var cleanDifference = $(window).scrollTop() - cleanOffest;
             //
-            var citraOffest = $('.beer-citra-grove').offset().top -500;
+            var citraOffest = $('.beer-citra-grove').offset().top - beerCircleOffset;
             var citraDifference = $(window).scrollTop() - citraOffest;
             //
-            var mosaicOffset = $('.beer-mosaic-grove').offset().top -500;
+            var mosaicOffset = $('.beer-mosaic-grove').offset().top - beerCircleOffset;
             var mosaicDifference = $(window).scrollTop() - mosaicOffset;
             //
-            var simcoeOffset = $('.beer-simcoe-grove').offset().top -500;
+            var simcoeOffset = $('.beer-simcoe-grove').offset().top - beerCircleOffset;
             var simcoeDifference = $(window).scrollTop() - simcoeOffset;
             //
-            var stoneOffeset = $('.beer-stone-road').offset().top -500;
+            var stoneOffeset = $('.beer-stone-road').offset().top - beerCircleOffset;
             var stoneDifference = $(window).scrollTop() - stoneOffeset;
             //
-            var cellarOffeset = $('.beer-cellar-garde').offset().top -500;
+            var cellarOffeset = $('.beer-cellar-garde').offset().top - beerCircleOffset;
             var cellarDifference = $(window).scrollTop() - cellarOffeset;
             //
 

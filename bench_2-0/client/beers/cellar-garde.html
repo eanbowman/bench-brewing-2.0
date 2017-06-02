@@ -190,13 +190,14 @@
                 <a href="../our-beer.html" class="beer-back-btn"><span class="back-arrow">&lsaquo;</span> BACK</a>
                 <div id="beerHeroCopy" class="row">
                     <div class="col-sm-12 col-xs-12 beer-heroCopy ani_5 active">
-                        <h1>Cedar Garde</h1>
-                        <p>Named after the historic waterfall located in the Twenty Valley, our Session IPA has a juicy hop aroma of peaches and citrus. It’s highly sessionable with a low bitterness, and finishes dry with a hint of cedar.</p>
+                        <h1>Cellar Biere de Garde</h1>
+                        <p>Our first Brett Saison is a tribute of things to come from the historic Maple Grove School in Beamsville, Ontario – the new home of the Bench Brewing Company. This crisp and rustic Brett Saison is straw coloured and medium bodied, with aromas of honey, pineapple and white grapes.</p>
                     </div>
                 </div>
             </div>
 
-            <section id="beerDisplay" class="balls-falls">
+            <section id="beerDisplay" class="cellar-garde">
+                <div class="beer-display-escarpment cellar-garde"></div>
                 <div class="beerDisplayCan col-sm-12 col-md-6">
                     <div class="beer-display-can-img"><img class="ani_3" data-slide-up="true" src="/_assets/images/beers/cellar-bottle.png" alt="Ball's Falls IPA" /></div>
                 </div>
@@ -299,6 +300,10 @@
                     } else{
                         $('#find-a-pint').css('top', -(paraPos-200)+'px');
                     }
+
+                    // Set height of esscarpment div to match container div
+                    var beerDisplayHeight = $("#beerDisplay").height();
+                    $(".beer-display-escarpment").height(beerDisplayHeight);
                 };
 
                 animate();

@@ -197,6 +197,8 @@
             </div>
 
             <section id="beerDisplay" class="balls-falls">
+                <div class="beer-display-escarpment citra-grove"></div>
+                <div class="beer-display-flowers citra-grove"></div>
                 <div class="beerDisplayCan col-sm-12 col-md-6">
                     <div class="beer-display-can-img"><img class="ani_3" data-slide-up="true" src="/_assets/images/beers/citra-bottle.png" alt="Ball's Falls IPA" /></div>
                 </div>
@@ -286,14 +288,22 @@
                     // Set offsets and Target for animation and Parallax
                     var paraPos = ($(window).scrollTop()/5);
 
-                    var prodOffest = $('.beerDisplayCan').offset().top -500;
+
+                    // beerStats common offset
+                    var beerCommonOffset = 500;
+                    var prodOffest = $('.beerDisplayCan').offset().top - beerCommonOffset;
                     var prodDifference = $(window).scrollTop() - prodOffest;
                     //
-                    var statsOffest = $('.beerStat').offset().top -500;
+                    var statsOffest = $('.beerStat').offset().top - beerCommonOffset;
                     var statsDifference = $(window).scrollTop() - statsOffest;
+                    //
+                    var flowersOffset = $('.beer-display-flowers').offset().top - beerCommonOffset;
+                    var flowersDifference = $(window).scrollTop() - statsOffest;
+
                     //beerDisplayCan //beerStat
                     $('.beerDisplayCan').css('opacity', (prodDifference/4)/100);
                     $('.beerStat').css('opacity', (statsDifference/4)/100);
+                    $('.beer-display-flowers').css('opacity', (statsDifference/4)/100);
                     if(($(window).innerWidth()) <= 768){
                         $('#find-a-pint').css('top', -(paraPos-275)+'px');
                     } else{

@@ -71,10 +71,10 @@ $colour-dark-grey: #313131;
     background-image: url("/_assets/images/bknd-mobile/bknd-ourbeer-slideover-twentymile.jpg");
 }
 .hero-stone-background {
-    background-image: url("/_assets/images/beers/bknd-head-balls-falls.jpg");
+    background-image: url("/_assets/images/bknd-stone-header.jpg");
 }
 .hero-cellar-background {
-    background-image: url("/_assets/images/bknd-mobile/bknd-head-balls-falls.jpg");
+    background-image: url("/_assets/images/bknd-we.jpg");
 }
 .hero-citra-background {
     background-image: url("/_assets/images/Bench_CitraGrove_BG_Image.jpg");
@@ -96,9 +96,21 @@ $colour-dark-grey: #313131;
         h1, p {
             color: white;
         }
+
+        @media only screen and (min-width: 1365px) {
+            h1 {
+                font-size: 51px;
+            }
+        }
+
+        &.mosaic-grove,
+        .simcoe-grove {
+            h1 {
+                font-size: 48px;
+            }
+        }
     }
 }
-
 #our-beer-display .container-fluid {
     margin: 0px;
     padding-left: 0px;
@@ -125,7 +137,7 @@ $colour-dark-grey: #313131;
 }
 
 .twenty-back{
-    background-image: url("/_assets/images/beers/bknd-details-twenty.jpg");
+    background-image: url("/_assets/images/beers/bknd/1_bkgd.jpg");
     @media screen and (max-width: 991px) {
         background-image: url("/_assets/images/bknd-paper-clean.png");
         &.beer-bknd-balls-falls {
@@ -135,7 +147,7 @@ $colour-dark-grey: #313131;
 }
 
 .cellar-back{
-    background-image: url("/_assets/images/beers/bknd-details-cellar.jpg");
+    background-image: url("/_assets/images/beers/bknd/1_bkgd.jpg");
     @media screen and (max-width: 991px) {
         background-image: url("/_assets/images/bknd-paper-clean.png");
         &.beer-bknd-balls-falls {
@@ -144,7 +156,7 @@ $colour-dark-grey: #313131;
     }
 }
 .citra-back{
-    background-image: url("/_assets/images/beers/bknd-details-citra.jpg");
+    background-image: url("/_assets/images/beers/bknd/1_bkgd.jpg");
     @media screen and (max-width: 991px) {
         background-image: url("/_assets/images/bknd-paper-clean.png");
         &.beer-bknd-balls-falls {
@@ -153,7 +165,7 @@ $colour-dark-grey: #313131;
     }
 }
 .mosaic-back{
-    background-image: url("/_assets/images/beers/bknd-details-mosaic.jpg");
+    background-image: url("/_assets/images/beers/bknd/1_bkgd.jpg");
     @media screen and (max-width: 991px) {
         background-image: url("/_assets/images/bknd-paper-clean.png");
         &.beer-bknd-balls-falls {
@@ -162,7 +174,7 @@ $colour-dark-grey: #313131;
     }
 }
 .simcoe-back{
-    background-image: url("/_assets/images/beers/bknd-details-simcoe.jpg");
+    background-image: url("/_assets/images/beers/bknd/1_bkgd.jpg");
     @media screen and (max-width: 991px) {
         background-image: url("/_assets/images/bknd-paper-clean.png");
         &.beer-bknd-balls-falls {
@@ -171,7 +183,7 @@ $colour-dark-grey: #313131;
     }
 }
 .stone-back{
-    background-image: url("/_assets/images/beers/bknd-details-stone.jpg");
+    background-image: url("/_assets/images/beers/bknd/1_bkgd.jpg");
     @media screen and (max-width: 991px) {
         background-image: url("/_assets/images/bknd-paper-clean.png");
         &.beer-bknd-balls-falls {
@@ -181,7 +193,7 @@ $colour-dark-grey: #313131;
 }
 
 #beerDisplay {
-    min-height: 1000px;
+    min-height: 887px;
     overflow: hidden;
     padding-top: 75px;
     position: relative;
@@ -204,6 +216,44 @@ $colour-dark-grey: #313131;
         width: 100%;
         position: absolute;
         top: 75px;
+        z-index: 0;
+
+        &.twenty-mile {
+            background-image: url("/_assets/images/beers/bknd/3_Twentymile_esc.png");
+        }
+
+        &.cellar-garde {
+            background-image: url("/_assets/images/beers/bknd/3_Cellar_esc.png");
+        }
+
+        &.citra-grove {
+            background-image: url("/_assets/images/beers/bknd/3_Citra_esc.png");
+        }
+        &.clean-slate {
+            background-image: url("/_assets/images/beers/bknd/3_Cleanslate_esc.png");
+        }
+        &.stone-road {
+            background-image: url("/_assets/images/beers/bknd/3_Stoneroad_esc.png");
+            top: -38px;
+        }
+    }
+
+    .beer-display-flowers {
+        background: url("/_assets/images/beers/bknd/2_Citra_grove_flowers.png") bottom left no-repeat;
+        background-size: contain;
+        height: 925px;
+        left: 0px;
+        width: 100%;
+        position: absolute;
+        top: 75px;
+        z-index: 0;
+
+        &.mosaic-grove {
+            background-image: url("/_assets/images/beers/bknd/2_Mosaic_grove_flowers.png");
+        }
+        &.simcoe-grove {
+            background-image: url("/_assets/images/beers/bknd/2_Simcoe_grove_flowers.png");
+        }
     }
 
     .beer-display-stats {
