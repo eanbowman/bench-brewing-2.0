@@ -103,6 +103,14 @@ $width-large-column: 970px;
     }
   }
 
+  .beer-available-at-lcbo-ring {
+    background: url("/_assets/images/ourbeer-available-at-lcbo.png") bottom left no-repeat;
+    background-size: contain;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
   .beer-availability-text {
     background: url("/_assets/images/ourbeer-coming-aug.png") bottom left no-repeat;
     background-size: contain;
