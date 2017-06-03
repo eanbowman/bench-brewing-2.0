@@ -1242,6 +1242,69 @@ img {
     display: table !important;
 }
 
+// Mailchimp Styles
+#contactus, #contactus * {
+    box-sizing: border-box;
+}
+
+// Input field styles
+#contactus {
+    input[type=password][data-required],
+    input[type=text][data-required],
+    select[data-required],
+    textarea[data-required] {
+        border-left: solid 10px #c00
+    }
+
+    input[type=password][data-required].valid,
+    input[type=text][data-required].valid,
+    select[data-required].valid,
+    textarea[data-required].valid {
+        border-left: solid 10px #0c0
+    }
+
+    input[type=password][data-required].error,
+    input[type=text][data-required].error,
+    select[data-required].error,
+    textarea[data-required].error {
+        color: #c00!important;
+        border: 1px solid #c00;
+        border-left: solid 10px #c00
+    }
+
+    input[type=text][data-required].error:-moz-placeholder,
+    input[type=text][data-required].error:-ms-input-placeholder,
+    input[type=text][data-required].error::-moz-placeholder,
+    input[type=text][data-required].error::-webkit-input-placeholder {
+        color: #c00!important;
+        opacity: 1!important
+    }
+
+    input[type=password][data-required].error:-moz-placeholder,
+    input[type=password][data-required].error:-ms-input-placeholder,
+    input[type=password][data-required].error::-moz-placeholder,
+    input[type=password][data-required].error::-webkit-input-placeholder {
+        color: #c00!important;
+        opacity: 1!important
+    }
+
+    select[data-required].error:-moz-placeholder,
+    select[data-required].error:-ms-input-placeholder,
+    select[data-required].error::-moz-placeholder,
+    select[data-required].error::-webkit-input-placeholder {
+        color: #c00!important;
+        opacity: 1!important
+    }
+
+    textarea[data-required].error:-moz-placeholder,
+    textarea[data-required].error:-ms-input-placeholder,
+    textarea[data-required].error::-moz-placeholder,
+    textarea[data-required].error::-webkit-input-placeholder {
+        color: #c00!important;
+        opacity: 1!important
+    }
+}
+
 // Footer Code
 #Footer{
     /* unvisited link */
