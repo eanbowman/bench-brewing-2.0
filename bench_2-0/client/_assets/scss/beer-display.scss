@@ -324,6 +324,18 @@ $colour-dark-grey: #313131;
     &.balls-falls {
         margin-top: 0px;
     }
+
+    .find-a-pint-secondary-copy {
+        margin: 50px auto;
+        max-width: 675px;
+        text-align: center;
+        width: 100%;
+
+        a {
+            color: white !important;
+            display: block;
+        }
+    }
 }
 
 #our-beer-display {
