@@ -172,7 +172,7 @@ img {
 .getBackground{
     position: absolute;
     top: 0px;
-    height: 1600px;
+    height: 1400px;
     width: 100%;
     background-image: url('/_assets/images/get-involved-back.png');
     background-position: top center;
@@ -181,13 +181,13 @@ img {
      
 
     @media only screen and (min-width: 1024px){
-        height: 1500px;
+        height: 1300px;
     }
     @media only screen and (min-width: 1366px){
-        height: 1700px;
+        height: 1500px;
     }
     @media only screen and (min-width: 1650px){
-        height: 1900px;
+        height: 1700px;
     }
 }
 //////////////////////////////////
@@ -1220,9 +1220,14 @@ img {
 ////////////////   Event Styles
 /////////////////////////////////////////////////////////////
 .getHead{
-    padding-top:150px;
-    padding-bottom:100px;
+    padding-top: 150px;
+    padding-bottom: 100px;
     color: #313131;
+
+    .getHeadCopy {
+        max-width: 80%;
+        margin: 0px auto;
+    }
 }
 .eventHolder{
     padding-top: 0;
