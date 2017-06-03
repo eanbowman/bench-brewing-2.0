@@ -1028,6 +1028,23 @@ img {
     }
 
 }
+//Careers
+#careers {
+    .careers-listing {
+        padding: 40px;
+        
+        .career-item:nth-child(even) {
+            background: white;
+            color: #313131;
+        }
+        h1 {
+            font-size: 18px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+}
 /////// Our Brewery
 #brewHeroCopy{
     padding:0;
