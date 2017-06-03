@@ -40,18 +40,8 @@ $(document).ready(function() {
     isMobile = (mobileAndTabletcheck());
 
     // Events and Event Handles
-
-    // On click hamburger, expand hamburger menu
     $('.hamburger').click(function(){
-        $('.nav-menuDropDown').toggleClass('active');
-    });
-    // On click outside of menu
-    $(document).click(function(event) { 
-        if(!$(event.target).closest('.nav-menuDropDown').length && 
-            !$(event.target).closest('.hamburger').length ) {
-            console.log("collapsing menu");
-            $('.nav-menuDropDown').removeClass('active');
-        }        
+        $('.nav-menuDropDown').css('top','65px');
     });
     //
     $('.nav-menuDropDown').mouseleave(function(){
