@@ -1453,7 +1453,7 @@ img {
 // iPhone 5 fit everything
 @media screen and (max-width: 374px) {
     img, .beer-listing-item {
-        max-width: 300px
+        max-width: 100%;
     }
 
     .beer-listing-item {
