@@ -1030,19 +1030,33 @@ img {
 }
 //Careers
 #careers {
-    .careers-listing {
+    .career-item {
         padding: 40px;
-        
-        .career-item:nth-child(even) {
-            background: white;
-            color: #313131;
-        }
+
         h1 {
-            font-size: 18px;
+            font-size: 30px;
+            text-align: left;
         }
         p {
-            font-size: 12px;
+            font-size: 18px;
         }
+        .careers-read-more {
+            border: 2px solid white;
+            display: inline-block;
+            float: right;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 50px;
+            text-transform: uppercase;
+        }
+    }
+    .career-item:nth-child(even) {
+        background: white;
+        color: #313131;
+    }
+    .career-item:nth-child(even) .carrers-read-more,
+    .career-item .dark-border {
+        border: 2px solid #313131;
     }
 }
 /////// Our Brewery
