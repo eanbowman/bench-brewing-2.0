@@ -208,10 +208,10 @@
                     <div class="col-md-4 col-sm-6 col-xs-12 fbPost event1">
                         <div class="fb-post" data-href="https://www.facebook.com/benchbrewing/posts/933382420135012" data-width="350" data-show-text="true"><blockquote cite="https://www.facebook.com/benchbrewing/posts/933382420135012" class="fb-xfbml-parse-ignore"><p>Patio season is here, and The Bauer Kitchen is kicking it off in style this Friday, June 2nd 2017 from 5&#x2013;8pm. Drop by...</p>Posted by <a href="https://www.facebook.com/benchbrewing/">Bench Brewing Company</a> on&nbsp;<a href="https://www.facebook.com/benchbrewing/posts/933382420135012">Monday, 29 May 2017</a></blockquote></div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 fbPost event3">
+                    <div class="col-md-4 col-sm-6 col-xs-12 fbPost event2">
                         <div class="fb-post" data-href="https://www.facebook.com/cestwhat/posts/10155268916812412" data-width="350" data-show-text="true"><blockquote cite="https://www.facebook.com/cestwhat/posts/10155268916812412" class="fb-xfbml-parse-ignore"><p>We&#039;ve got on hell of a triple bill for you coming up. Make sure to check out TC Folkpunk, Claude Kent and James Clark on June 11th!</p>Posted by <a href="https://www.facebook.com/cestwhat/">C&#039;est What</a> on&nbsp;<a href="https://www.facebook.com/cestwhat/posts/10155268916812412">Tuesday, 30 May 2017</a></blockquote></div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 fbPost event4">
+                    <div class="col-md-4 col-sm-6 col-xs-12 fbPost event3">
                         <div class="fb-post" data-href="https://www.facebook.com/cestwhat/posts/10155254394702412" data-width="350" data-show-text="true"><blockquote cite="https://www.facebook.com/cestwhat/posts/10155254394702412" class="fb-xfbml-parse-ignore"><p>Shikha Sehgal is part of the 17th Bob Dylan Birthday Tribute tonight but if you can&#039;t catch her tonight, we&#039;ve got you covered! She has a whole evening of great original tunes planned for us on June 4th!</p>Posted by <a href="https://www.facebook.com/cestwhat/">C&#039;est What</a> on&nbsp;<a href="https://www.facebook.com/cestwhat/posts/10155254394702412">Thursday, 25 May 2017</a></blockquote></div>
                     </div>
 
@@ -371,6 +371,7 @@
             var fbOffest3 = $('.event3').offset().top -500;
             var fbDifference3 = $(window).scrollTop() - fbOffest3;
             //
+            /*
             var fbOffest4 = $('.event4').offset().top -500;
             var fbDifference4 = $(window).scrollTop() - fbOffest4;
             //
@@ -385,6 +386,7 @@
             //
             var fbOffest8 = $('.event8').offset().top -500;
             var fbDifference8 = $(window).scrollTop() - fbOffest8;
+            */
            
 
 
@@ -422,11 +424,11 @@
             $('.event1').css('opacity', (fbDifference1/4)/100);
             $('.event2').css('opacity', (fbDifference2/4)/100);
             $('.event3').css('opacity', (fbDifference3/4)/100);
-            $('.event4').css('opacity', (fbDifference4/4)/100);
-            $('.event5').css('opacity', (fbDifference5/4)/100);
-            $('.event6').css('opacity', (fbDifference6/4)/100);
-            $('.event7').css('opacity', (fbDifference7/4)/100);
-            $('.event8').css('opacity', (fbDifference8/4)/100);
+            //$('.event4').css('opacity', (fbDifference4/4)/100);
+            //$('.event5').css('opacity', (fbDifference5/4)/100);
+            //$('.event6').css('opacity', (fbDifference6/4)/100);
+            //$('.event7').css('opacity', (fbDifference7/4)/100);
+            //$('.event8').css('opacity', (fbDifference8/4)/100);
             //
             $('.home-shopCopy').css('opacity', (shoplineDifference/4)/100);
             $('.home-shopHeader').css('opacity', (shoplineDifference/4)/100);
