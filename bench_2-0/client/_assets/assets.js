@@ -41,7 +41,7 @@ $(document).ready(function() {
 
     // Events and Event Handles
     $('.hamburger').click(function(){
-        $('.nav-menuDropDown').toggleClass('active'); // active class shows menu
+        $('.nav-menuDropDown').css('top','65px');
     });
     //
     $('.nav-menuDropDown').mouseleave(function(){
