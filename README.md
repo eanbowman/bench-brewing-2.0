@@ -1,3 +1,5 @@
+***** This is an archive of a site I helped update. I didn't make it. This code is pretty rough and I don't plan to maintain it. I was instructed by the agency who maintained this site for a customer to "put it on Github" and "use a free account" so I've done just that.
+
 Bench Brewing Website 2.0
 
 Step 1 – Install Node.js
